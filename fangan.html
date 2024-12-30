@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+
+<meta charset="UTF-8">
+
+<title>搬瓦工VPS主机项目方案整理 - 搬瓦工VPS</title>
+
+<meta name="keywords" content="搬瓦工方案">
+
+<meta name="description" content="搬瓦工VPS主机提供多款套餐，基本都是针对国内优化的线路，是目前便宜VPS主机中较为优秀、性价比高的商家。">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="renderer" content="webkit">
+
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+  
+
+  <link rel="stylesheet" href="static/css/amazeui.min.css">
+
+  <link rel="stylesheet" href="static/css/default.css">  
+
+</head>
+
+<body>
+
+<header class="am-topbar am-topbar-fixed-top">
+
+  <div class="am-container">
+
+    <div class="am-topbar-brand">
+
+      <a href="index.html" title="搬瓦工 - 搬瓦工vps服务器指南" rel="nofollow">搬瓦工</a>
+
+    </div>
+
+
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+
+        <li><a href="index.html" title="网站首页">网站首页</a></li>
+
+        <li class="am-active"><a href="" title="VPS方案">项目方案</a></li>
+
+        <li><a rel="nofollow"  href="gonglue.html" title="购买攻略教程">购买攻略</a></li>
+
+        <li><a rel="nofollow" href="shuju.html" title="数据中心/机房">数据中心</a></li>
+
+        <li><a rel="nofollow" href="xinshou.html" title="新手教程">新手教程</a></li>
+
+		<li><a href="weilin.html" title="VPS加速">VPS加速</a></li>
+
+    <li><a rel="nofollow" href="pingce.html" title="评测体验">评测体验</a></li>
+
+    <li><a href="dongtai.html" title="优惠动态">优惠动态</a></li>
+
+        <li><a href="lianxi.html" title="联系我们" rel="nofollow">联系我们</a></li>
+
+       </ul>
+
+
+
+      </div>
+
+  </div>
+
+</header>
+
+
+
+<div class="am-g am-g-fixed blog-g-fixed">
+
+  <div class="am-u-md-8">
+
+  <blockquote>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搬瓦工VPS，提供多种方案，包括美国洛杉矶CN2 GT、美国洛杉矶CN2 GIA、KVM常规方案、香港CN2 GIA、日本CN2 GIA、迪拜套餐等。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们用户可以根据自己的项目需要选择不同的方案，入门一般推荐选择搬瓦工CN2 GT方案，年付49.99美元起；建站以及追求线路稳定的朋友一般建议选择搬瓦工CN2 GIA-E方案，三网CN2 GIA，速度快，不丢包。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    如果你需要高端线路，则可以考虑香港CN2 GIA和日本CN2 GIA方案，价格贵，但是国内延迟低、速度快，堪比国内机房。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  如果我们需要升级方案，在购买之后，可以在后台升级到更高级别的方案。</blockquote>
+
+   <h2><span class="am-icon-bookmark"></span> 搬瓦工VPS方案整理</h2>
+
+   <hr class="am-article-divider blog-hr">
+
+   <p>搬瓦工VPS，支持CentOS、Debian、Ubuntu等30多个常见系统版本，不限制重装系统次数（有些商家每天/每月都有限制安装次数的），这样对于新手学习VPS，有需要多次安装是一个不错的选择。</p>
+
+   <pre><abbr title="小提示">Tip：</abbr>所有系统中只能Linux系统，不可以选择Windows系统，我们可以自己安装VNC桌面。</pre>
+
+   <p>一般，我们用户会根据自己项目的需要，选择下面的方案，入门一般推荐选择搬瓦工CN2 GT方案，年付49.99美元起；建站以及追求线路稳定的朋友一般建议选择搬瓦工CN2 GIA-E方案，三网CN2 GIA，速度快，不丢包；高端用户则可以选择香港CN2 GIA或者日本CN2 GIA，延迟更低，堪比国内机房。如果以后需要升级配置，都可以在后台操作。</p>
+  <p><img src="static/picture/bandwagonhost-fangan.png" alt="搬瓦工VPS最新方案" class="am-img-thumbnail am-radius"></p>
+      <p><strong>1、限量版优惠套餐</strong></p>
+      <p>搬瓦工时不时会推出限量版优惠套餐，例如比较火热的DC9 CN2 GIA限量版和DC6 CN2 GIA-E限量版，这两者的主要区别是价格和可选机房，后者多了DC6 CN2 GIA-E、日本大阪软银JPOS_1、荷兰联通EUNL_9这三个机房，并且价格贵了$10美元。</p>
+      <pre><abbr title="小提示">Tip：</abbr>关注搬瓦工优惠促销可以加入搬瓦工优惠通知QQ群（禁言，仅通知）：<a target="_blank" rel="nofollow" href="https://jq.qq.com/">点击进入啦</a>。</pre>
+        <div class="am-u-md-6"><div class="am-panel am-panel-danger"><div class="am-panel-hd"><span class="am-icon-tag"></span> 年79.99方案（DC9 CN2 GIA限量版）</div><ul><li>CPU：1核</li><li>内存：1024MB</li><li>硬盘：20GB SSD</li><li>流量：500GB/月（1Gbps带宽）</li><li>价格：$79.99/年</li></ul><div class="am-list-news-ft">
+
+    <a class="am-btn am-btn-warning am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=112" rel="nofollow" target="_blank">
+
+  <i class="am-icon-shopping-cart"></i>
+
+  直达方案通道
+
+</a>
+
+  </div></div></div>
+
+    <div class="am-u-md-6"><div class="am-panel am-panel-danger"><div class="am-panel-hd"><span class="am-icon-tag"></span> 年89.99方案（CN2 GIA-E限量版）</div><ul><li>CPU：1核</li><li>内存：1024MB</li><li>硬盘：20GB SSD</li><li>流量：500GB/月（1Gbps带宽）</li><li>价格：$89.99/年</li></ul><div class="am-list-news-ft">
+
+    <a class="am-btn am-btn-warning am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=105" rel="nofollow" target="_blank">
+
+  <i class="am-icon-shopping-cart"></i>
+
+  直达方案通道
+
+</a>
+</div></div></div>
+
+<p><strong>2、CN2 GT半程优化线路</strong></p>
+      <p>CN2 GT方案，拥有DC3 CN2，可选半程CN2机房，还有DC8 ZNET等多个其他机房。我们在购买的时候可能看到的就是DC3 CN2，但是我们可以切换机房到DC8 ZNET。当然也可以切换到普通KVM架构的其他海外机房，不可以切换到CN2 GIA。白天速度还可以，晚上延迟会比CN2 GIA高、丢包也会比较严重。</p>
+      <div class="am-g am-g-fixed">
+
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 年49.99方案（CN2 GT）</div>
+            <ul>
+              <li>CPU：1核</li>
+              <li>内存：1GB</li>
+              <li>硬盘：20GB SSD</li>
+              <li>流量：1000GB/月（1Gbps带宽）</li>
+              <li>价格：$49.99/年</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-success am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=57" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 半年52.99方案（CN2 GT）</div>
+            <ul>
+              <li>CPU：1核</li>
+              <li>内存：2GB</li>
+              <li>硬盘：40GB SSD</li>
+              <li>流量：2000GB/月（1Gbps带宽）</li>
+              <li>价格：$52.99/半年（$99.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-success am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=58" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 季59.99方案（CN2 GT）</div>
+            <ul>
+              <li>CPU：2核</li>
+              <li>内存：4GB</li>
+              <li>硬盘：80GB SSD</li>
+              <li>流量：3000GB/月（1Gbps带宽）</li>
+              <li>价格：$59.99/季（$199.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-success am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=59" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月39.99方案（CN2 GT）</div>
+            <ul>
+              <li>CPU：2核</li>
+              <li>内存：8GB</li>
+              <li>硬盘：160GB SSD</li>
+              <li>流量：5000GB/月（1Gbps带宽）</li>
+              <li>价格：$39.99/月（$399.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-success am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=67" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月79.99方案（CN2 GT）</div>
+            <ul>
+              <li>CPU：3核</li>
+              <li>内存：16GB</li>
+              <li>硬盘：320GB SSD</li>
+              <li>流量：8000GB/月（1Gbps带宽）</li>
+              <li>价格：$79.99/月（$799.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-success am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=68" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月99.99方案（CN2 GT）</div>
+            <ul>
+              <li>CPU：3核</li>
+              <li>内存：16GB</li>
+              <li>硬盘：320GB SSD</li>
+              <li>流量：12000GB/月（1Gbps带宽）</li>
+              <li>价格：$99.99/月（$999.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-success am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=106" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p><strong>3、洛杉矶CN2 GIA DC6(企业大带宽)</strong></p>
+      <p>从2019年2月份中旬开始，我们可以看到搬瓦工VPS主机商家有新增洛杉矶CN2 GIA DC6机房，用他们的标识算是CN2 GIA ECOMMERCE，主要是针对企业级用户使用的。提供最高达到10Gbps带宽。可以切换到多个机房，但是不支持切换到香港机房。</p>
+      <div class="am-g am-g-fixed">
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 年89.99方案（CN2 GIA-E限量版）</div>
+            <ul>
+              <li>CPU：1核</li>
+              <li>内存：1GB</li>
+              <li>硬盘：20GB SSD</li>
+              <li>流量：500GB/月（1Gbps带宽）</li>
+              <li>价格：$89.99/年</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=105" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 季49.99方案（CN2 GIA DC6）</div>
+            <ul>
+              <li>CPU：2核</li>
+              <li>内存：1GB</li>
+              <li>硬盘：20GB SSD</li>
+              <li>流量：1000GB/月（2.5Gbps带宽）</li>
+              <li>价格：$49.99/季（$169.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=87" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 季89.99方案（CN2 GIA DC6）</div>
+            <ul>
+              <li>CPU：3核</li>
+              <li>内存：2GB</li>
+              <li>硬盘：40GB SSD</li>
+              <li>流量：2000GB/月（2.5Gbps带宽）</li>
+              <li>价格：$89.99/季（$299.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=88" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月56.99方案（CN2 GIA DC6）</div>
+            <ul>
+              <li>CPU：4核</li>
+              <li>内存：4GB</li>
+              <li>硬盘：80GB SSD</li>
+              <li>流量：3000GB/月（2.5Gbps带宽）</li>
+              <li>价格：$56.99/月（$549.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=89" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月86.99方案（CN2 GIA DC6）</div>
+            <ul>
+              <li>CPU：6核</li>
+              <li>内存：8GB</li>
+              <li>硬盘：160GB SSD</li>
+              <li>流量：5000GB/月（5Gbps带宽）</li>
+              <li>价格：$86.99/月（$879.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=90" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月159.99方案（CN2 GIA DC6）</div>
+            <ul>
+              <li>CPU：8核</li>
+              <li>内存：16GB</li>
+              <li>硬盘：320GB SSD</li>
+              <li>流量：8000GB/月（5Gbps带宽）</li>
+              <li>价格：$159.99/月（$1599.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=91" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月289.99方案（CN2 GIA DC6）</div>
+            <ul>
+              <li>CPU：10核</li>
+              <li>内存：32GB</li>
+              <li>硬盘：640GB SSD</li>
+              <li>流量：10000GB/月（10Gbps带宽）</li>
+              <li>价格：$289.99/月（$2759.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=92" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月549.99方案（CN2 GIA DC6）</div>
+            <ul>
+              <li>CPU：12核</li>
+              <li>内存：64GB</li>
+              <li>硬盘：1280GB SSD</li>
+              <li>流量：12000GB/月（10Gbps带宽）</li>
+              <li>价格：$549.99/月（$5399.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=93" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+            <p><strong>4、迪拜套餐(企业大带宽)</strong></p>
+      <p>从2022年4月份末搬瓦工上线了迪拜套餐，同样是ECOMMERCE，主要是针对企业级用户使用的，提供最高达到10Gbps带宽。可以切换到多个机房，包括搬瓦工迪拜机房，但是不支持切换到香港机房。</p>
+      <div class="am-g am-g-fixed">
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月19.99方案（迪拜套餐）</div>
+            <ul>
+              <li>CPU：2核</li>
+              <li>内存：1GB</li>
+              <li>硬盘：20GB SSD</li>
+              <li>流量：1000GB/月（2.5Gbps带宽）</li>
+              <li>价格：$49.99/季（$169.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=114" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月32.99方案（迪拜套餐）</div>
+            <ul>
+              <li>CPU：3核</li>
+              <li>内存：2GB</li>
+              <li>硬盘：40GB SSD</li>
+              <li>流量：2000GB/月（2.5Gbps带宽）</li>
+              <li>价格：$89.99/季（$299.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=115" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月56.99方案（迪拜套餐）</div>
+            <ul>
+              <li>CPU：4核</li>
+              <li>内存：4GB</li>
+              <li>硬盘：80GB SSD</li>
+              <li>流量：3000GB/月（2.5Gbps带宽）</li>
+              <li>价格：$56.99/月（$549.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=116" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月86.99方案（迪拜套餐）</div>
+            <ul>
+              <li>CPU：6核</li>
+              <li>内存：8GB</li>
+              <li>硬盘：160GB SSD</li>
+              <li>流量：5000GB/月（5Gbps带宽）</li>
+              <li>价格：$86.99/月（$879.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=117" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月159.99方案（迪拜套餐）</div>
+            <ul>
+              <li>CPU：8核</li>
+              <li>内存：16GB</li>
+              <li>硬盘：320GB SSD</li>
+              <li>流量：8000GB/月（5Gbps带宽）</li>
+              <li>价格：$159.99/月（$1599.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=118" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月289.99方案（迪拜套餐）</div>
+            <ul>
+              <li>CPU：10核</li>
+              <li>内存：32GB</li>
+              <li>硬盘：640GB SSD</li>
+              <li>流量：10000GB/月（10Gbps带宽）</li>
+              <li>价格：$289.99/月（$2759.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=119" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6" style="float:left">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月549.99方案（迪拜套餐）</div>
+            <ul>
+              <li>CPU：12核</li>
+              <li>内存：64GB</li>
+              <li>硬盘：1280GB SSD</li>
+              <li>流量：12000GB/月（10Gbps带宽）</li>
+              <li>价格：$549.99/月（$5399.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-danger am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=120" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p><strong>5、中国香港CN2 GIA机房方案</strong></p>
+      <p>
+        搬瓦工VPS主机商也提供香港机房，采用香港CN2 GIA线路。与众多香港VPS主机商家不同之处在于搬瓦工提供高达1Gbps带宽，一般我们看到都是1-5M的，可能也有少见一些商家提供100M或者30Mbps的，但很少有遇到1Gbps的。搬瓦工香港机CN2 GIA方案可以切换到其他任何搬瓦工机房。
+      </p>
+      <div class="am-g am-g-fixed">
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月89.99方案（中国香港CN2 GIA）</div>
+            <ul>
+              <li>CPU：2核</li>
+              <li>内存：2GB</li>
+              <li>硬盘：40GB SSD</li>
+              <li>流量：500GB/月（1Gbps带宽）</li>
+              <li>价格：$89.99/月（$899.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-warning am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=95" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月155.99方案（中国香港CN2 GIA）</div>
+            <ul>
+              <li>CPU：4核</li>
+              <li>内存：4GB</li>
+              <li>硬盘：80GB SSD</li>
+              <li>流量：1000GB/月（1Gbps带宽）</li>
+              <li>价格：$155.99/月（$1559.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-warning am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=96" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月299.99方案（中国香港CN2 GIA）</div>
+            <ul>
+              <li>CPU：6核</li>
+              <li>内存：8GB</li>
+              <li>硬盘：160GB SSD</li>
+              <li>流量：2000GB/月（1Gbps带宽）</li>
+              <li>价格：$299.99/月（$2999.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-warning am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=97" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月589.99方案（中国香港CN2 GIA）</div>
+            <ul>
+              <li>CPU：8核</li>
+              <li>内存：16GB</li>
+              <li>硬盘：320GB SSD</li>
+              <li>流量：4000GB/月（1Gbps带宽）</li>
+              <li>价格：$589.99/月（$5899.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-warning am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=98" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p><strong>6、日本东京CN2 GIA机房方案</strong></p>
+      <p>
+        搬瓦工VPS主机商也有提供日本东京机房，采用东京CN2 GIA线路。与众多东京VPS主机商家不同之处在于搬瓦工提供高达1.2Gbps带宽。搬瓦工东京机房配置不可以切换机房，只有一个机房。
+      </p>
+      <div class="am-g am-g-fixed">
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月89.99方案（日本东京CN2 GIA）</div>
+            <ul>
+              <li>CPU：2核</li>
+              <li>内存：2GB</li>
+              <li>硬盘：40GB SSD</li>
+              <li>流量：500GB/月（1.2Gbps带宽）</li>
+              <li>价格：$89.99/月（$899.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-warning am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=108" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月155.99方案（日本东京CN2 GIA）</div>
+            <ul>
+              <li>CPU：4核</li>
+              <li>内存：4GB</li>
+              <li>硬盘：80GB SSD</li>
+              <li>流量：1000GB/月（1.2Gbps带宽）</li>
+              <li>价格：$155.99/月（$1559.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-warning am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=109" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月299.99方案（日本东京CN2 GIA）</div>
+            <ul>
+              <li>CPU：6核</li>
+              <li>内存：8GB</li>
+              <li>硬盘：160GB SSD</li>
+              <li>流量：2000GB/月（1.2Gbps带宽）</li>
+              <li>价格：$299.99/月（$2999.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-warning am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=110" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月589.99方案（日本东京CN2 GIA）</div>
+            <ul>
+              <li>CPU：8核</li>
+              <li>内存：16GB</li>
+              <li>硬盘：320GB SSD</li>
+              <li>流量：4000GB/月（1.2Gbps带宽）</li>
+              <li>价格：$589.99/月（$5899.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-warning am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=111" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p><strong>7、普通机房方案</strong></p>
+      <p>搬瓦工VPS普通机房方案，可以切换到CN2 GT机房，但是切换之后流量会减少至三分之一，不可以切换到CN2 GIA或者香港机房。对于预算不足的用户且需要CN2 GT线路的，可以用用，流量使用不多的用户可以选择。</p>
+      <div class="am-g am-g-fixed">
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 年49.99方案（普通KVM）</div>
+            <ul>
+              <li>CPU：2核</li>
+              <li>内存：1GB</li>
+              <li>硬盘：20GB SSD</li>
+              <li>流量：1000GB/月（1Gbps带宽）</li>
+              <li>价格：$49.99/年</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-primary am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=44" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 半年$52.99方案（普通KVM）</div>
+            <ul>
+              <li>CPU：3核</li>
+              <li>内存：2GB</li>
+              <li>硬盘：40GB SSD</li>
+              <li>流量：2000GB/月（1Gbps带宽）</li>
+              <li>价格：$52.99/半年（$99.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-primary am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=45" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月付19.99方案（普通KVM）</div>
+            <ul>
+              <li>CPU：4核</li>
+              <li>内存：4GB</li>
+              <li>硬盘：80GB SSD</li>
+              <li>流量：3000GB/月（1Gbps带宽）</li>
+              <li>价格：$19.99/月（$199.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-primary am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=46" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月付39.99方案（普通KVM）</div>
+            <ul>
+              <li>CPU：5核</li>
+              <li>内存：8GB</li>
+              <li>硬盘：160GB SSD</li>
+              <li>流量：4000GB/月（1Gbps带宽）</li>
+              <li>价格：$39.99/月（$399.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-primary am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=47" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月付79.99方案（普通KVM）</div>
+            <ul>
+              <li>CPU：6核</li>
+              <li>内存：16GB</li>
+              <li>硬盘：320GB SSD</li>
+              <li>流量：5000GB/月（1Gbps带宽）</li>
+              <li>价格：$79.99/月（$799.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-primary am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=48" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-md-6">
+          <div class="am-panel am-panel-primary">
+            <div class="am-panel-hd"><span class="am-icon-tag"></span> 月付119.99方案（普通KVM）</div>
+            <ul>
+              <li>CPU：7核</li>
+              <li>内存：24GB</li>
+              <li>硬盘：480GB SSD</li>
+              <li>流量：6000GB/月（1Gbps带宽）</li>
+              <li>价格：$119.99/月（$1199.99/年）</li>
+            </ul>
+            <div class="am-list-news-ft">
+              <a class="am-btn am-btn-primary am-radius" href="https://bwh81.net/aff.php?aff=61735&pid=49" rel="nofollow" target="_blank">
+                <i class="am-icon-shopping-cart"></i>
+                直达方案通道
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<blockquote><p><font color="red"><b>当前可用搬瓦工VPS列表：</b></font><a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&gid=1" target="_blank" title="看到ORDER NOW表示当前有货">点击这里查看当前所有可购买搬瓦工方案</a> ，且购买时候使用<mark>BWHCGLUKKB</mark> 优惠码再节省6.5%（更多：<a href="youhui.html">使用搬瓦工优惠码</a>）</p></blockquote>
+
+<pre><abbr title="小提示">Tip：</abbr>选择合适自己的VPS方案。搬瓦工VPS任何方案都支持无限次重装系统。</pre>
+<h2><span class="am-icon-bookmark"></span> 搬瓦工VPS选择建议</h2>
+      <p>1、根据速度选择</p>
+      <p>如果我们追求VPS主机速度，在搬瓦工已有的四种配置中我们可以从速度区分。分别是 香港机房、洛杉矶CN2 GIA、洛杉矶CN2 GT、普通机房。不过价格上需要根据我们实际的预算选择。</p>
+      <p>2、根据功能选择</p>
+      <p>
+        目前，搬瓦工VPS主机只有Linux系统。我们在选择VPS主机的时候一般用于建站、调制软件程序、自己配置环境测试使用的，包括我们还有很多用于外贸业务的。总之，我们根据自己需要的选择配置和机房，对于建站我建议是需要至少1GB内存的，一般我们安装面板的话最好是需要这个内存起步。如果是普通的软件测试，不在乎内存的话无所谓，目前最低是512MB内存。
+      </p>
+      <p>3、根据需求项目周期</p>
+      <p>虽然搬瓦工VPS新注册用户支持新订单30天内可以无条件退款，但是老用户或者超过30天是不允许退款的。我们有些项目是短期使用的，我们可以选择月付方式。当然，如果需要多机房的，我们可以选择CN2
+        GIA，这样可以切换的机房比一般普通机房是多一些的。如果需要多机房，那不建议选香港机房，因为香港机房不可以切换。（参考： <a href="bwg.php?tag=bandwagonhost-migrate-to-another-dc/" target="_blank" title="选择搬瓦工VPS机房方案以及正确切换机房/IP方法">选择搬瓦工VPS机房方案以及正确切换机房/IP方法</a>）</p>
+      <p>总结，任何商家都有优势和缺点，搬瓦工VPS主机商家也一样的。比如我们可以看到原来低价的搬瓦工Bandwagonhost已经不再低价，但是相反的我们可以看到配置与性能的提高。</p>
+  
+  </div>
+
+
+
+  <div class="am-u-md-4 blog-sidebar">
+
+    <div class="am-panel-group">
+
+      <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">关于我们</div>
+
+        <div class="am-panel-bd">
+
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搬瓦工VPS，一款性价比极高的便宜VPS主机方案，搬瓦工专注提供各种国内优化线路的VPS，包括美国洛杉矶CN2 GIA、香港CN2 GIA、日本CN2 GIA、日本软银等，线路稳定、速度快，商家靠谱，有自己研发的控制面板管理系统，功能非常全面，适合我们基础建站、搭建环境以及各种折腾应用。</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;建议：选择任何一款VPS，具体的使用效果一切以我们实际为准，而且要知晓付出的成本与我们的获得的产品相当就应该知足，且不要要求太高。</p>
+          <p>搬瓦工VPS优惠通知QQ群：<a href="https://jq.qq.com/" target="_blank" rel="nofollow noopener">点击进入</a>
+</p>
+
+         
+
+        </div>
+
+      </section>
+
+       <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">新手教程</div>
+
+        <ul class="am-list blog-list">
+
+         <li><a href="gonglue.html" target="_blank">新手用户搬瓦工VPS购买图文指导教程</a></li>
+
+        <li><a href="jichu.html" target="_blank">搬瓦工VPS基础应用篇 - 选择登录已购VPS方案</a></li>
+
+        <li><a href="anzhuang.html" target="_blank">搬瓦工VPS重新安装Linux系统过程及注意事项</a></li>  
+
+        <li><a href="genghuan.html" target="_blank">搬瓦工VPS自主任意更换机房实现换IP</a></li>
+
+        <li><a href="shengji.html" target="_blank">自助升级搬瓦工VPS主机方案方法</a></li>  
+
+        <li><a href="youhui.html" target="_blank">使用搬瓦工优惠码 让价格更低一点</a></li>  
+
+        <li><a href="install-wdcp.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(一) - 一键包安装WDCP面板</a></li>   
+
+        <li><a href="xufei.html" target="_blank">搬瓦工VPS续费、自动续费、取消续费几个问题</a></li> 
+
+        <li><a href="wdcp-addsite.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(二) - 添加站点和MYSQL数据库</a></li>
+
+        <li><a href="xuanzejifang.html" target="_blank">搬瓦工VPS主机选择机房和方案的几个建议</a></li>
+
+        <li><a href="tips.html" target="_blank">正确使用搬瓦工VPS主机的用途以及合理注意事项</a></li>
+
+        <li><a href="install-bt-panel.html" target="_blank">搬瓦工VPS快速安装BT宝塔Web面板</a></li>
+
+        </ul>
+
+      </section>
+
+             <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">搬瓦工选择建议</div>
+
+        <div class="am-panel-bd">
+
+          <p><strong>1. 搬瓦工美国 CN2（入门）</strong></p>
+<p>A. 1TB/月，49.99美元/年（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=57" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 2TB/月，52.99美元/半年（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=58" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>2. 搬瓦工美国 CN2 GIA-E（<span style="color: #ff0000;">推荐</span>）</strong></p>
+<p>A. 1TB/月，49.99美元/季度（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=87" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 2TB/月，69.99美元/季度（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=88" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>3. 搬瓦工中国香港 CN2 GIA（高端）</strong></p>
+<p>A. 500GB/月，89.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=95" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 1TB/月，155.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=96" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>4. 搬瓦工日本东京 CN2 GIA（高端）</strong></p>
+<p>A. 500GB/月，89.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=108" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 1TB/月，155.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=109" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>4. 所有方案</strong>：《<a href="" target="_blank" rel="noopener">搬瓦工方案大全</a>》</p>
+
+        </div>
+
+      </section>
+
+      <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">最新搬瓦工优惠码</div>
+
+        <div class="am-panel-bd">
+
+          <p>虽然搬瓦工VPS已经算是比较便宜的了，但是为了迎合各种大家的兴趣和省钱的心态，还是会分享一些优惠码折扣让大家使用的，比如当前最低的大约在6.5%左右。</p>
+
+          <p>A - BWHCGLUKKB（6.77%）</p>
+
+          <p>B - BWH3OGRI2BMW（5.83%）</p>
+
+          <p>C - ireallyreadtheterms8（5.5%）</p>
+
+          <p>D - BWH3MNP2CG5J（5.39%）</p>
+
+          <p>E - BWH38ZU9VDKP（4.8%）</p>
+
+          <p>这是<a href="index.html">搬瓦工中文网</a>整理的最新的5个折扣码，我们可以选择A优先使用，每单可以节省几块钱。具体如何使用可以参考<a href="youhui.html" target="_blank">这里</a>，激活使用。</p>
+
+         
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+
+</div><footer class="blog-footer">
+
+<hr data-am-widget="divider" style="" class="am-divider am-divider-default">
+
+  <p>
+
+    <small>CopyRight © 2015-2025 <a href="/index.html" rel="nofollow">搬瓦工vps指南</a> bwgvps-cn.org<br>搬瓦工vps服务器购买资讯 <a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">ICP证000861号</a><br>搬瓦工VPS购买指南本网站-提供方便新手用户的阅读文档技术支持。</small>
+
+
+
+  </p>
+
+</footer>
+
+
+
+<!--[if lt IE 9]>
+
+<script src="static/js/jquery.min1.js"></script>
+
+<script src="static/js/modernizr.js"></script>
+
+<script src="style/js/polyfill/rem.min.js"></script>
+
+<script src="style/js/polyfill/respond.min.js"></script>
+
+<script src="style/js/amazeui.legacy.js"></script>
+
+<![endif]-->
+
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<script src="static/js/jquery.min.js"></script>
+
+<script src="static/js/amazeui.min.js"></script>
+
+
+<script src="static/js/zdy.js"></script><!--<![endif]-->
+
+
+
+</body>
+
+</html>

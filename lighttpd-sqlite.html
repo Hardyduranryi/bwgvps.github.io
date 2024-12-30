@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+
+<meta charset="UTF-8">
+
+<title>搬瓦工VPS安装PHP/Lighttpd/SQLite轻量级网站部署 - 搬瓦工VPS</title>
+
+<meta name="description" content="比如不能使用PHPMYADMIN数据库管理，最好也不要用MYSQL数据库，采用占用资源的SQLITE数据库。而且服务器架构驱动不能用占用资源较大的NGINX、APACHE，而采用LITESPEED或者Lighttpd，占用资源较小。">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="renderer" content="webkit">
+
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+  
+
+  <link rel="stylesheet" href="static/css/amazeui.min.css">
+
+  <link rel="stylesheet" href="static/css/default.css">  
+
+</head>
+
+<body>
+
+<header class="am-topbar am-topbar-fixed-top">
+
+  <div class="am-container">
+
+    <div class="am-topbar-brand">
+
+      <a href="index.html" title="搬瓦工 - 搬瓦工vps服务器指南" rel="nofollow">搬瓦工</a>
+
+    </div>
+
+
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+
+<li><a href="index.html" title="网站首页">网站首页</a></li>
+
+        <li><a rel=”nofollow“ href="fangan.html" title="VPS方案">项目方案</a></li>
+
+        <li><a rel="nofollow"  href="gonglue.html" title="购买攻略教程">购买攻略</a></li>
+
+        <li><a rel="nofollow" href="shuju.html" title="数据中心/机房">数据中心</a></li>
+
+        <li class="am-active"><a href="xinshou.html" title="新手教程">新手教程</a></li>
+
+		<li><a href="weilin.html" title="VPS加速">VPS加速</a></li>
+
+		<li><a rel="nofollow" href="pingce.html" title="评测体验">评测体验</a></li>
+
+		<li><a href="dongtai.html" title="优惠动态">优惠动态</a></li>
+
+        <li><a href="lianxi.html" title="联系我们" rel="nofollow">联系我们</a></li>
+
+       </ul>
+
+
+
+      </div>
+
+  </div>
+
+</header>
+
+
+
+<div class="am-g am-g-fixed blog-g-fixed">
+
+  <div class="am-u-md-8">
+
+  <h2><span class="am-icon-bookmark"></span> 搬瓦工VPS安装PHP/Lighttpd/SQLite轻量级网站部署</h2>
+
+   <hr class="am-article-divider blog-hr">
+
+   <p>如果我们使用小内存VPS主机，尤其是类似早些时候<a href="index.html">BandwagonHost</a>搬瓦工64MB、128MB内存方案的小内存VPS，我们如果要建站也是可以的，但必须用更节省资源的方法。比如不能使用PHPMYADMIN数据库管理，最好也不要用MYSQL数据库，采用占用资源的SQLITE数据库。而且服务器架构驱动不能用占用资源较大的NGINX、APACHE，而采用LITESPEED或者Lighttpd，占用资源较小。</p>
+
+   <pre><abbr title="小提示">Tip：</abbr> 如果我们要架设小网站玩玩，小内存是可以的，如果要架设大流量占用网站，就不要这么抠门。</pre>
+
+   <p>在这篇文章中中，我们将采用PHP+Lighttpd+SQLITE架构，手工编译网站环境。</p>
+
+   <blockquote><p><font color="red"><b>当前可用搬瓦工VPS列表：</b></font><a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&gid=1" target="_blank" title="看到ORDER NOW表示当前有货">点击这里查看当前所有可购买搬瓦工方案</a> ，且购买时候使用<mark>IAMSMART5GRNII</mark> 优惠码再节省5%</p></blockquote>
+
+   <h3><span class="am-icon-angellist"></span> 第一、选择DEBIAN系统</h3>
+
+   <p>这里我们选择占用资源较小的DEBIAN6 32位环境。以及执行脚本升级到最新系统源，以至于编译不会失败找不到源。</p>
+
+   <p><code>apt-get update -y</code></p>
+
+    <h3><span class="am-icon-angellist"></span> 第二、安装SQLITE数据库</h3>
+
+    <p><code>apt-get install sqlite -y</code></p>
+
+<p>直接用编译文件安装sqlite数据库。</p>
+
+<h3><span class="am-icon-angellist"></span> 第三、安装Lighttpd</h3>
+
+  
+
+    <p><code>apt-get install lighttpd -y</code></p>
+
+<p>编译Lighttpd环境，安装服务器软件驱动。</p>
+
+<p><img src="static/picture/20160822-1.jpg" class="am-img-thumbnail am-radius" alt="Lighttpd环境"></p>
+
+<p>看到这样的窗口，我们都不要管，全部回车默认。编译完毕之后，我们的Lighttpd环境架构就完毕，打开IP地址看看。看到"It works!"字样表示没有问题。</p>
+
+<h3><span class="am-icon-angellist"></span> 第四、安装必要的PHP组件</h3>
+
+<p><code>apt-get install php5-cgi php5-curl php5-gd php5-idn php-pear php5-imagick php5-imap php5-mcrypt php5-mhash php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y</code></p>
+
+<h3><span class="am-icon-angellist"></span> 第五、添加站点和目录</h3>
+
+<p><code>useradd -d /home/wwwroot -m -s /bin/bash www</code></p>
+
+<h3><span class="am-icon-angellist"></span> 第六、修改配置文件</h3>
+
+<p><code>vi /etc/lighttpd/lighttpd.conf</code></p>
+
+<p>我们将这个文件中的所有内容更换：</p>
+
+<p><img src="static/picture/20160822-2.jpg" class="am-img-thumbnail am-radius" alt="修改lighttpd.conf"></p>
+
+  <p><code>/tools/lighttpd.conf.txt</code></p>
+
+  <p>我们可以将这个脚本复制替换到我们当前服务器的配置文件中。</p>
+
+<h3><span class="am-icon-angellist"></span> 第七、启动服务器生效</h3>
+
+<p><code>chown -R www:www /var/log/lighttpd</code></p>
+
+<p><code>/etc/init.d/lighttpd restart</code></p>
+
+ <p>最后，我们就可以架设网站了，只要将域名解析到当前服务器就可以，然后将程序通过SFTP上传到/var/www目录中，因为采用的SQLITE数据库，我们程序选择要用轻便的，比如用ZBLOG PHP或者TYPECHO等轻便型博客程序。</p>
+
+<p>这里我们需要记住，等会我们要添加上传程序的时候，就在这个目录。当然，我们现在就可以将域名解析到当前服务器中。</p>
+
+    <pre><abbr title="小提示">Tip：</abbr> 如果我们还需要了解其他搬瓦工VPS教程，可以参考<a href="xinshou.html" target="_blank"><abbr title="需要代购">新手教程</abbr></a>目录分类。</pre>
+
+  </div>
+
+
+
+  <div class="am-u-md-4 blog-sidebar">
+
+    <div class="am-panel-group">
+
+      <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">关于我们</div>
+
+        <div class="am-panel-bd">
+
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搬瓦工VPS，一款性价比极高的便宜VPS主机方案，搬瓦工专注提供各种国内优化线路的VPS，包括美国洛杉矶CN2 GIA、香港CN2 GIA、日本CN2 GIA、日本软银等，线路稳定、速度快，商家靠谱，有自己研发的控制面板管理系统，功能非常全面，适合我们基础建站、搭建环境以及各种折腾应用。</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;建议：选择任何一款VPS，具体的使用效果一切以我们实际为准，而且要知晓付出的成本与我们的获得的产品相当就应该知足，且不要要求太高。</p>
+          <p>搬瓦工VPS优惠通知QQ群：<a href="https://jq.qq.com/" target="_blank" rel="nofollow noopener">点击进入</a>
+</p>
+
+         
+
+        </div>
+
+      </section>
+
+       <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">新手教程</div>
+
+        <ul class="am-list blog-list">
+
+         <li><a href="gonglue.html" target="_blank">新手用户搬瓦工VPS购买图文指导教程</a></li>
+
+        <li><a href="jichu.html" target="_blank">搬瓦工VPS基础应用篇 - 选择登录已购VPS方案</a></li>
+
+        <li><a href="anzhuang.html" target="_blank">搬瓦工VPS重新安装Linux系统过程及注意事项</a></li>  
+
+        <li><a href="genghuan.html" target="_blank">搬瓦工VPS自主任意更换机房实现换IP</a></li>
+
+        <li><a href="shengji.html" target="_blank">自助升级搬瓦工VPS主机方案方法</a></li>  
+
+        <li><a href="youhui.html" target="_blank">使用搬瓦工优惠码 让价格更低一点</a></li>  
+
+        <li><a href="install-wdcp.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(一) - 一键包安装WDCP面板</a></li>   
+
+        <li><a href="xufei.html" target="_blank">搬瓦工VPS续费、自动续费、取消续费几个问题</a></li> 
+
+        <li><a href="wdcp-addsite.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(二) - 添加站点和MYSQL数据库</a></li>
+
+        <li><a href="xuanzejifang.html" target="_blank">搬瓦工VPS主机选择机房和方案的几个建议</a></li>
+
+        <li><a href="tips.html" target="_blank">正确使用搬瓦工VPS主机的用途以及合理注意事项</a></li>
+
+        <li><a href="install-bt-panel.html" target="_blank">搬瓦工VPS快速安装BT宝塔Web面板</a></li>
+
+        </ul>
+
+      </section>
+
+             <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">搬瓦工选择建议</div>
+
+        <div class="am-panel-bd">
+
+          <p><strong>1. 搬瓦工美国 CN2（入门）</strong></p>
+<p>A. 1TB/月，49.99美元/年（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=57" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 2TB/月，52.99美元/半年（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=58" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>2. 搬瓦工美国 CN2 GIA-E（<span style="color: #ff0000;">推荐</span>）</strong></p>
+<p>A. 1TB/月，49.99美元/季度（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=87" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 2TB/月，69.99美元/季度（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=88" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>3. 搬瓦工中国香港 CN2 GIA（高端）</strong></p>
+<p>A. 500GB/月，89.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=95" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 1TB/月，155.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=96" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>4. 搬瓦工日本东京 CN2 GIA（高端）</strong></p>
+<p>A. 500GB/月，89.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=108" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 1TB/月，155.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=109" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>4. 所有方案</strong>：《<a href="fangan.html" target="_blank" rel="noopener">搬瓦工方案大全</a>》</p>
+
+        </div>
+
+      </section>
+
+      <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">最新搬瓦工优惠码</div>
+
+        <div class="am-panel-bd">
+
+          <p>虽然搬瓦工VPS已经算是比较便宜的了，但是为了迎合各种大家的兴趣和省钱的心态，还是会分享一些优惠码折扣让大家使用的，比如当前最低的大约在6.5%左右。</p>
+
+          <p>A - BWHCGLUKKB（6.77%）</p>
+
+          <p>B - BWH3OGRI2BMW（5.83%）</p>
+
+          <p>C - ireallyreadtheterms8（5.5%）</p>
+
+          <p>D - BWH3MNP2CG5J（5.39%）</p>
+
+          <p>E - BWH38ZU9VDKP（4.8%）</p>
+
+          <p>这是<a href="index.html">搬瓦工中文网</a>整理的最新的5个折扣码，我们可以选择A优先使用，每单可以节省几块钱。具体如何使用可以参考<a href="youhui.html" target="_blank">这里</a>，激活使用。</p>
+
+         
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+
+</div><footer class="blog-footer">
+
+<hr data-am-widget="divider" style="" class="am-divider am-divider-default">
+
+  <p>
+
+    <small>CopyRight © 2015-2025 <a href="/index.html" rel="nofollow">搬瓦工vps指南</a> bwgvps-cn.org<br>搬瓦工vps服务器购买资讯 <a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">ICP证000861号</a><br>搬瓦工VPS购买指南本网站-提供方便新手用户的阅读文档技术支持。</small>
+
+
+
+  </p>
+
+</footer>
+
+
+
+<!--[if lt IE 9]>
+
+<script src="static/js/jquery.min1.js"></script>
+
+<script src="static/js/modernizr.js"></script>
+
+<script src="style/js/polyfill/rem.min.js"></script>
+
+<script src="style/js/polyfill/respond.min.js"></script>
+
+<script src="style/js/amazeui.legacy.js"></script>
+
+<![endif]-->
+
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<script src="static/js/jquery.min.js"></script>
+
+<script src="static/js/amazeui.min.js"></script>
+
+
+<script src="static/js/zdy.js"></script><!--<![endif]-->
+
+
+
+</body>
+
+</html>

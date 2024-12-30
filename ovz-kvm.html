@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+
+<meta charset="UTF-8">
+
+<title>Linux VPS基本常识 - KVM与OpenVZ架构的区别 - 搬瓦工VPS</title>
+
+<meta name="keywords" content="KVM,OpenVZ">
+
+<meta name="description" content="什么是KVM？沈明是OpenVZ？本文是一个简单的科普。">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="renderer" content="webkit">
+
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+  
+
+  <link rel="stylesheet" href="static/css/amazeui.min.css">
+
+  <link rel="stylesheet" href="static/css/default.css">  
+
+</head>
+
+<body>
+
+<header class="am-topbar am-topbar-fixed-top">
+
+  <div class="am-container">
+
+    <div class="am-topbar-brand">
+
+      <a href="index.html" title="搬瓦工 - 搬瓦工vps服务器指南" rel="nofollow">搬瓦工</a>
+
+    </div>
+
+
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+
+<li><a href="index.html" title="网站首页">网站首页</a></li>
+
+        <li><a rel=”nofollow“ href="fangan.html" title="VPS方案">项目方案</a></li>
+
+        <li><a rel="nofollow"  href="gonglue.html" title="购买攻略教程">购买攻略</a></li>
+
+        <li><a rel="nofollow" href="shuju.html" title="数据中心/机房">数据中心</a></li>
+
+        <li class="am-active"><a href="xinshou.html" title="新手教程">新手教程</a></li>
+
+		<li><a href="weilin.html" title="VPS加速">VPS加速</a></li>
+
+		<li><a rel="nofollow" href="pingce.html" title="评测体验">评测体验</a></li>
+
+		<li><a href="dongtai.html" title="优惠动态">优惠动态</a></li>
+
+        <li><a href="lianxi.html" title="联系我们" rel="nofollow">联系我们</a></li>
+
+       </ul>
+
+
+
+      </div>
+
+  </div>
+
+</header>
+
+
+
+<div class="am-g am-g-fixed blog-g-fixed">
+
+  <div class="am-u-md-8">
+
+  <h2><span class="am-icon-bookmark"></span> Linux VPS基本常识 - KVM与OpenVZ架构的区别</h2>
+
+   <hr class="am-article-divider blog-hr">
+
+   <p>今年，搬瓦工商家变化还是比较大的，从3月初直接上线3个数据中心（洛杉矶MC、加拿大、纽约），一共拥有8个数据中心（参考：<a href="shuju.html" target="_blank" title="搬瓦工8个数据中心测试IP地址">搬瓦工8个数据中心测试IP地址</a>）可能并不是太奇怪。但是，如果我们选择多就地方方案，可以自由的切换机房，对于有需要不同IP项目用户的，可以通过切换IP地址，然后实现项目的节省成本。同时，在3月份中旬的时候，再次做了一个较大的调整，上线KVM架构方案。</p>
+
+   <p>如果我们稍有较长时间使用过Linux VPS、服务器的用户，肯定知道原来OPENVZ架构，其实与KVM架构之间还是有较多区别的。尤其是稳定性上，KVM是比较稳定，而且KVM可以拓展的程序软件比较多。</p>
+
+   <pre><abbr title="小提示">Tip：</abbr> 我们可以看到主流的VPS提供商，都是采用KVM架构，XEN架构都开始很少使用。</pre>
+
+  
+
+   <h3><span class="am-icon-angellist"></span> 第一、OPENVZ架构普及知识</h3>
+
+    <p>OpenVZ是基于Linux内核和作业系统的操作系统级虚拟化技术。OpenVZ允许物理服务器运行多个操作系统，被称虚拟专用服务器（VPS，Virtual Private Server）或虚拟环境（VE, Virtual Environment）。</p>
+
+       <p>OpenVZ软件同时为用户提供工具，协助自动化管理虚拟服务器。基于模板的应用程序部署可以在几分钟内用简单的方法创建新的虚拟服务器并投入使用，而且与其他的虚拟化技术相比，OpenVZ可以在每CPU上运行几倍于其他虚拟化服务器技术的虚拟化服务器。</p>
+
+       <p>OpenVZ可以在单个物理服务器上创建多个隔离的虚拟专用服务器(VPS)并以最大效率共享硬件和管理资源。每个VPS的运行和独立服务器完全一致，因其自身的用户、应用程序都可以独立重启，它拥有根访问权限、用户、IP地址、内存、处理器、文件、应用服务、系统库文件和配置文件等。拥有轻量级处理损耗和高效设计的OpenVZ是运行应用服务和实时数据生产型服务器虚拟化的最佳选择。</p>
+
+    
+
+<pre><abbr title="小提示">Tip：</abbr> 最简单，我们可以看到OPENVZ VPS是比较便宜的。</pre>
+
+    <h3><span class="am-icon-angellist"></span> 第二、KVM架构普及知识</h3>    
+
+    <p>KVM作为内核的一个模块，来提供虚拟化功能。如果系统需要虚拟化功能，则KVM模块可以被Linux内核按需动态加载到内存运行。如果不需要的KVM功能，可以动态卸载该模块。</p>
+
+    <p>KVM是嵌入在Linux操作系统标准内核中的一个虚拟化模块，它能够将一个Linux标准内核转换成为一个VMM，嵌有KVM模块的Linux标准内核可以支持通过kvm tools来进行加载的GuestOS。所以在这样的操作系统平台下，计算机物理硬件层上直接就是VMM虚拟化层，而没有独立出来的HostOS操作系统层。</p>
+
+       <p>kvm 是完全虚拟的，所以不分 pv 和 hvm 的区别，所有的 kvm 类型的虚拟技术都可以装各种 linux 的发行版和各种 win 的发行版，不管供应商在主页有没有写明是否支持 win，只要你配置够 win 运行，那就肯定可以装的上去，只是方法的问题而已。</p>
+
+     <h3><span class="am-icon-angellist"></span> 第三、OPENVZ 与 KVM 缺点比较</h3>
+
+   
+
+    <p>OPENVZ - 超卖，没有不超卖的，导致各种石头盘，钻石盘。连带的 cpu 也被过度分割导致性能升值不如其标明的 1/10。再有就是内存，基本上 OpenVZ 技术没有独占的，都是共享，别人多了你就少了，而且这种技术最大的劣势就是内存下来后直接就是当机。</p> 
+
+
+
+    <p>KVM - KVM 资源占用也看周边邻居的资源使用情况，如果折腾的用户太多，也会导致自己的不稳定。简单一点，比如<a href="index.html" title="搬瓦工">搬瓦工</a>商家才开始销售KVM机器，我们可以看到稳定性还是不错的，就看以后是否有大量的折腾用户进来，如果是，那会给我们有不小的影响。</p>  
+
+
+
+    <p>总结，无论是OPENVZ还是KVM架构，我们还需要看商家的技术，以及管理，如果控制的好，还是不错的机器，如果乱折腾不管理，那再好的机器、配置都是白搭。再过一段时间，测试对比看看OPENVZ与KVM两种架构的机器之间的速度和稳定区别。</p>     
+
+    
+
+    <pre><abbr title="小提示">Tip：</abbr> 如果我们还需要其他搬瓦工方面的技术内容，可以参考后面内容！<a href="xinshou.html" target="_blank"><abbr title="需要代购">新手教程</abbr></a>目录分类。</pre>
+
+  </div>
+
+
+
+  <div class="am-u-md-4 blog-sidebar">
+
+    <div class="am-panel-group">
+
+      <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">关于我们</div>
+
+        <div class="am-panel-bd">
+
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搬瓦工VPS，一款性价比极高的便宜VPS主机方案，搬瓦工专注提供各种国内优化线路的VPS，包括美国洛杉矶CN2 GIA、香港CN2 GIA、日本CN2 GIA、日本软银等，线路稳定、速度快，商家靠谱，有自己研发的控制面板管理系统，功能非常全面，适合我们基础建站、搭建环境以及各种折腾应用。</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;建议：选择任何一款VPS，具体的使用效果一切以我们实际为准，而且要知晓付出的成本与我们的获得的产品相当就应该知足，且不要要求太高。</p>
+          <p>搬瓦工VPS优惠通知QQ群：<a href="https://jq.qq.com/" target="_blank" rel="nofollow noopener">点击进入</a>
+</p>
+
+         
+
+        </div>
+
+      </section>
+
+       <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">新手教程</div>
+
+        <ul class="am-list blog-list">
+
+         <li><a href="gonglue.html" target="_blank">新手用户搬瓦工VPS购买图文指导教程</a></li>
+
+        <li><a href="jichu.html" target="_blank">搬瓦工VPS基础应用篇 - 选择登录已购VPS方案</a></li>
+
+        <li><a href="anzhuang.html" target="_blank">搬瓦工VPS重新安装Linux系统过程及注意事项</a></li>  
+
+        <li><a href="genghuan.html" target="_blank">搬瓦工VPS自主任意更换机房实现换IP</a></li>
+
+        <li><a href="shengji.html" target="_blank">自助升级搬瓦工VPS主机方案方法</a></li>  
+
+        <li><a href="youhui.html" target="_blank">使用搬瓦工优惠码 让价格更低一点</a></li>  
+
+        <li><a href="install-wdcp.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(一) - 一键包安装WDCP面板</a></li>   
+
+        <li><a href="xufei.html" target="_blank">搬瓦工VPS续费、自动续费、取消续费几个问题</a></li> 
+
+        <li><a href="wdcp-addsite.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(二) - 添加站点和MYSQL数据库</a></li>
+
+        <li><a href="xuanzejifang.html" target="_blank">搬瓦工VPS主机选择机房和方案的几个建议</a></li>
+
+        <li><a href="tips.html" target="_blank">正确使用搬瓦工VPS主机的用途以及合理注意事项</a></li>
+
+        <li><a href="install-bt-panel.html" target="_blank">搬瓦工VPS快速安装BT宝塔Web面板</a></li>
+
+        </ul>
+
+      </section>
+
+             <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">搬瓦工选择建议</div>
+
+        <div class="am-panel-bd">
+
+          <p><strong>1. 搬瓦工美国 CN2（入门）</strong></p>
+<p>A. 1TB/月，49.99美元/年（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=57" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 2TB/月，52.99美元/半年（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=58" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>2. 搬瓦工美国 CN2 GIA-E（<span style="color: #ff0000;">推荐</span>）</strong></p>
+<p>A. 1TB/月，49.99美元/季度（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=87" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 2TB/月，69.99美元/季度（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=88" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>3. 搬瓦工中国香港 CN2 GIA（高端）</strong></p>
+<p>A. 500GB/月，89.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=95" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 1TB/月，155.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=96" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>4. 搬瓦工日本东京 CN2 GIA（高端）</strong></p>
+<p>A. 500GB/月，89.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=108" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 1TB/月，155.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=109" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>4. 所有方案</strong>：《<a href="fangan.html" target="_blank" rel="noopener">搬瓦工方案大全</a>》</p>
+
+        </div>
+
+      </section>
+
+      <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">最新搬瓦工优惠码</div>
+
+        <div class="am-panel-bd">
+
+          <p>虽然搬瓦工VPS已经算是比较便宜的了，但是为了迎合各种大家的兴趣和省钱的心态，还是会分享一些优惠码折扣让大家使用的，比如当前最低的大约在6.5%左右。</p>
+
+          <p>A - BWHCGLUKKB（6.77%）</p>
+
+          <p>B - BWH3OGRI2BMW（5.83%）</p>
+
+          <p>C - ireallyreadtheterms8（5.5%）</p>
+
+          <p>D - BWH3MNP2CG5J（5.39%）</p>
+
+          <p>E - BWH38ZU9VDKP（4.8%）</p>
+
+          <p>这是<a href="index.html">搬瓦工中文网</a>整理的最新的5个折扣码，我们可以选择A优先使用，每单可以节省几块钱。具体如何使用可以参考<a href="youhui.html" target="_blank">这里</a>，激活使用。</p>
+
+         
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+
+</div><footer class="blog-footer">
+
+<hr data-am-widget="divider" style="" class="am-divider am-divider-default">
+
+  <p>
+
+    <small>CopyRight © 2015-2025 <a href="/index.html" rel="nofollow">搬瓦工vps指南</a> bwgvps-cn.org<br>搬瓦工vps服务器购买资讯 <a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">ICP证000861号</a><br>搬瓦工VPS购买指南本网站-提供方便新手用户的阅读文档技术支持。</small>
+
+
+
+  </p>
+
+</footer>
+
+
+
+<!--[if lt IE 9]>
+
+<script src="static/js/jquery.min1.js"></script>
+
+<script src="static/js/modernizr.js"></script>
+
+<script src="style/js/polyfill/rem.min.js"></script>
+
+<script src="style/js/polyfill/respond.min.js"></script>
+
+<script src="style/js/amazeui.legacy.js"></script>
+
+<![endif]-->
+
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<script src="static/js/jquery.min.js"></script>
+
+<script src="static/js/amazeui.min.js"></script>
+
+
+<script src="static/js/zdy.js"></script><!--<![endif]-->
+
+
+
+</body>
+
+</html>

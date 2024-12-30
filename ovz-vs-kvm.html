@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+
+<meta charset="UTF-8">
+
+<title>简单评测搬瓦工OPENVZ与KVM架构速度性能 附选择建议 - 搬瓦工VPS</title>
+
+<meta name="keywords" content="KVM,OpenVZ">
+
+<meta name="description" content="搬瓦工VPS商家正式推出KVM架构方案，价格与传统的OPENVZ一样，机房目前有包括洛杉矶在内的6个机房，那我们到底选择OPENVZ还是KVM呢？">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="renderer" content="webkit">
+
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+  
+
+  <link rel="stylesheet" href="static/css/amazeui.min.css">
+
+  <link rel="stylesheet" href="static/css/default.css">  
+
+</head>
+
+<body>
+
+<header class="am-topbar am-topbar-fixed-top">
+
+  <div class="am-container">
+
+    <div class="am-topbar-brand">
+
+      <a href="index.html" title="搬瓦工 - 搬瓦工vps服务器指南" rel="nofollow">搬瓦工</a>
+
+    </div>
+
+
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+
+<li><a href="index.html" title="网站首页">网站首页</a></li>
+
+        <li><a rel=”nofollow“ href="fangan.html" title="VPS方案">项目方案</a></li>
+
+        <li><a rel="nofollow"  href="gonglue.html" title="购买攻略教程">购买攻略</a></li>
+
+        <li><a rel="nofollow" href="shuju.html" title="数据中心/机房">数据中心</a></li>
+
+        <li class="am-active"><a href="xinshou.html" title="新手教程">新手教程</a></li>
+
+		<li><a href="weilin.html" title="VPS加速">VPS加速</a></li>
+
+		<li><a rel="nofollow" href="pingce.html" title="评测体验">评测体验</a></li>
+
+		<li><a href="dongtai.html" title="优惠动态">优惠动态</a></li>
+
+        <li><a href="lianxi.html" title="联系我们" rel="nofollow">联系我们</a></li>
+
+       </ul>
+
+
+
+      </div>
+
+  </div>
+
+</header>
+
+
+
+<div class="am-g am-g-fixed blog-g-fixed">
+
+  <div class="am-u-md-8">
+
+  <h2><span class="am-icon-bookmark"></span> 简单评测搬瓦工OPENVZ与KVM架构速度性能 附选择建议 </h2>
+
+   <hr class="am-article-divider blog-hr">
+
+   <p>应该是在今年三月份的时候，<a href="index.html" title="BandwagonHost">BandwagonHost</a> 商家测试发布KVM架构VPS主机，毕竟当前主流的服务商都有提供KVM架构，而且相比OPENVZ架构而言，前者的扩展性更加强大，对于主机的稳定更好。对于我们用户而言，速度、稳定，以及可以安装的软件会支持更多。进入六月份，我们有看到KVM架构方案正式推出，而且价格与常规的OPENVZ VPS架构一样。</p>
+
+   <p>但是，如果我们需要使用到底选择哪一款呢？目前，KVM架构有包括洛杉矶在内的6个机房，OPENVZ一共有8个机房，主体机房还是都有的，速度和稳定性根据区域不同可能有差异，这里我要到官方提供的KVM和OPENVZ洛杉矶测试IP地址。一起看看实际的速度如何。</p>
+
+   <p>扩展阅读：   <a href="ovz-kvm.html" title="Linux VPS基本常识 - KVM与OpenVZ架构的区别">Linux VPS基本常识 - KVM与OpenVZ架构的区别</a>、 <a href="kvm-install-bbr.html" title="搬瓦工KVM VPS内置TCP BBR加速内核">搬瓦工KVM VPS内置TCP BBR加速内核</a></p>
+
+   <pre><abbr title="小提示">Tip：</abbr> 个人建议：优先选择KVM架构，因为内置BBR内核，速度比OPENVZ稳定。</pre>
+
+  <h3><span class="am-icon-angellist"></span> 第一、OPENVZ与KVM测试IP</h3>
+
+
+
+<p>在这篇文章中，我将使用2个架构，同一个洛杉矶QNET机房测试IP评测。</p>
+
+<p>OPENVZ洛杉矶QNET：104.194.76.20</p>
+
+<p>KVM洛杉矶QNET: 23.252.96.201</p>
+
+   <h3><span class="am-icon-angellist"></span> 第二、PING速度对比</h3>
+
+       <p>1、OPENVZ PING速度</p>
+
+    <p><img src="static/picture/2017060501.jpg" class="am-img-thumbnail am-radius" title="OPENVZ PING速度"></p>
+
+    <p>2、KVM PING速度</p>
+
+    <p><img src="static/picture/2017060502.jpg" class="am-img-thumbnail am-radius" title="KVM PING速度"></p>
+
+    <p>从PING数据速度看，KVM好像稳定性好一些，丢包地域也少，价格相同的时候建议选择KVM架构。</p>
+
+    <h3><span class="am-icon-angellist"></span> 第三、KVM架构优势</h3>
+
+       <p>如果我们一些项目的需要，需要支持KVM才可以使用，以及KVM架构可以扩展的软件比较多，还支持BBR内置，直接有BBR系统，不需要额外安装。</p>
+
+    <p><img src="static/picture/20170502-2.jpg" class="am-img-thumbnail am-radius" title="BBR加速内核"></p>
+
+    <p>我们在KVM架构的时候选择系统，直接选择带有BBR内核的，这样实际的稳定性会更好一些。</p>
+
+    <h3><span class="am-icon-angellist"></span> 第四、KVM架构速度如何</h3>
+
+<p><img src="static/picture/2017060503.jpg" class="am-img-thumbnail am-radius" title="KVM架构速度如何"></p>
+
+    <p>总结，可以看到KVM架构内置BBR后，使用速度还是比较好的，比如我们还可以安装锐速。</p>
+
+    <pre><abbr title="小提示">Tip：</abbr> 如果我们还需要其他搬瓦工方面的技术内容，可以参考后面内容！<a href="xinshou.html" target="_blank"><abbr title="需要代购">新手教程</abbr></a>目录分类。</pre>
+
+  </div>
+
+
+
+  <div class="am-u-md-4 blog-sidebar">
+
+    <div class="am-panel-group">
+
+      <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">关于我们</div>
+
+        <div class="am-panel-bd">
+
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搬瓦工VPS，一款性价比极高的便宜VPS主机方案，搬瓦工专注提供各种国内优化线路的VPS，包括美国洛杉矶CN2 GIA、香港CN2 GIA、日本CN2 GIA、日本软银等，线路稳定、速度快，商家靠谱，有自己研发的控制面板管理系统，功能非常全面，适合我们基础建站、搭建环境以及各种折腾应用。</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;建议：选择任何一款VPS，具体的使用效果一切以我们实际为准，而且要知晓付出的成本与我们的获得的产品相当就应该知足，且不要要求太高。</p>
+          <p>搬瓦工VPS优惠通知QQ群：<a href="https://jq.qq.com/" target="_blank" rel="nofollow noopener">点击进入</a>
+</p>
+
+         
+
+        </div>
+
+      </section>
+
+       <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">新手教程</div>
+
+        <ul class="am-list blog-list">
+
+         <li><a href="gonglue.html" target="_blank">新手用户搬瓦工VPS购买图文指导教程</a></li>
+
+        <li><a href="jichu.html" target="_blank">搬瓦工VPS基础应用篇 - 选择登录已购VPS方案</a></li>
+
+        <li><a href="anzhuang.html" target="_blank">搬瓦工VPS重新安装Linux系统过程及注意事项</a></li>  
+
+        <li><a href="genghuan.html" target="_blank">搬瓦工VPS自主任意更换机房实现换IP</a></li>
+
+        <li><a href="shengji.html" target="_blank">自助升级搬瓦工VPS主机方案方法</a></li>  
+
+        <li><a href="youhui.html" target="_blank">使用搬瓦工优惠码 让价格更低一点</a></li>  
+
+        <li><a href="install-wdcp.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(一) - 一键包安装WDCP面板</a></li>   
+
+        <li><a href="xufei.html" target="_blank">搬瓦工VPS续费、自动续费、取消续费几个问题</a></li> 
+
+        <li><a href="wdcp-addsite.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(二) - 添加站点和MYSQL数据库</a></li>
+
+        <li><a href="xuanzejifang.html" target="_blank">搬瓦工VPS主机选择机房和方案的几个建议</a></li>
+
+        <li><a href="tips.html" target="_blank">正确使用搬瓦工VPS主机的用途以及合理注意事项</a></li>
+
+        <li><a href="install-bt-panel.html" target="_blank">搬瓦工VPS快速安装BT宝塔Web面板</a></li>
+
+        </ul>
+
+      </section>
+
+             <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">搬瓦工选择建议</div>
+
+        <div class="am-panel-bd">
+
+          <p><strong>1. 搬瓦工美国 CN2（入门）</strong></p>
+<p>A. 1TB/月，49.99美元/年（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=57" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 2TB/月，52.99美元/半年（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=58" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>2. 搬瓦工美国 CN2 GIA-E（<span style="color: #ff0000;">推荐</span>）</strong></p>
+<p>A. 1TB/月，49.99美元/季度（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=87" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 2TB/月，69.99美元/季度（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=88" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>3. 搬瓦工中国香港 CN2 GIA（高端）</strong></p>
+<p>A. 500GB/月，89.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=95" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 1TB/月，155.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=96" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>4. 搬瓦工日本东京 CN2 GIA（高端）</strong></p>
+<p>A. 500GB/月，89.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=108" target="_blank" rel="noopener">购买</a>）</p>
+<p>B. 1TB/月，155.99美元/月（<a rel="nofollow " href="https://bwh81.net/aff.php?aff=61735&amp;pid=109" target="_blank" rel="noopener">购买</a>）</p>
+<p><strong>4. 所有方案</strong>：《<a href="fangan.html" target="_blank" rel="noopener">搬瓦工方案大全</a>》</p>
+
+        </div>
+
+      </section>
+
+      <section class="am-panel am-panel-default">
+
+        <div class="am-panel-hd">最新搬瓦工优惠码</div>
+
+        <div class="am-panel-bd">
+
+          <p>虽然搬瓦工VPS已经算是比较便宜的了，但是为了迎合各种大家的兴趣和省钱的心态，还是会分享一些优惠码折扣让大家使用的，比如当前最低的大约在6.5%左右。</p>
+
+          <p>A - BWHCGLUKKB（6.77%）</p>
+
+          <p>B - BWH3OGRI2BMW（5.83%）</p>
+
+          <p>C - ireallyreadtheterms8（5.5%）</p>
+
+          <p>D - BWH3MNP2CG5J（5.39%）</p>
+
+          <p>E - BWH38ZU9VDKP（4.8%）</p>
+
+          <p>这是<a href="index.html">搬瓦工中文网</a>整理的最新的5个折扣码，我们可以选择A优先使用，每单可以节省几块钱。具体如何使用可以参考<a href="youhui.html" target="_blank">这里</a>，激活使用。</p>
+
+         
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+
+</div><footer class="blog-footer">
+
+<hr data-am-widget="divider" style="" class="am-divider am-divider-default">
+
+  <p>
+
+    <small>CopyRight © 2015-2025 <a href="/index.html" rel="nofollow">搬瓦工vps指南</a> bwgvps-cn.org<br>搬瓦工vps服务器购买资讯 <a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">ICP证000861号</a><br>搬瓦工VPS购买指南本网站-提供方便新手用户的阅读文档技术支持。</small>
+
+
+
+  </p>
+
+</footer>
+
+
+
+<!--[if lt IE 9]>
+
+<script src="static/js/jquery.min1.js"></script>
+
+<script src="static/js/modernizr.js"></script>
+
+<script src="style/js/polyfill/rem.min.js"></script>
+
+<script src="style/js/polyfill/respond.min.js"></script>
+
+<script src="style/js/amazeui.legacy.js"></script>
+
+<![endif]-->
+
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<script src="static/js/jquery.min.js"></script>
+
+<script src="static/js/amazeui.min.js"></script>
+
+
+<script src="static/js/zdy.js"></script><!--<![endif]-->
+
+
+
+</body>
+
+</html>

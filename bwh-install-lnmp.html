@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>搬瓦工主机建站系统配置：LNMP老牌一键WEB安装包安装Nginx/Apache引擎 - 搬瓦工VPS</title>
+<meta name="keywords" content="搬瓦工主机建站,搬瓦工建站方法,lnmp">
+<meta name="description" content="每年，LNMP脚本会在六一节更新新的正式版本，包括在月初的时候有发布V1.6正式版。与oneinstack相比，LNMP相对较为稳妥，因为每一个版本在更新之前都会进行长达半年的公测，如果用户在使用公测版有什么问题，可以给予提出建议和意见，经过半年多测试后才会发布。">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  
+  <link rel="stylesheet" href="static/css/amazeui.min.css">
+  <link rel="stylesheet" href="static/css/default.css">  
+</head>
+<body>
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <div class="am-topbar-brand">
+      <a href="index.html" title="搬瓦工 - 搬瓦工vps服务器指南" rel="nofollow">搬瓦工</a>
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li><a href="index.html" title="网站首页">网站首页</a></li>
+        <li><a rel=”nofollow“ href="fangan.html" title="VPS方案">项目方案</a></li>
+        <li><a rel="nofollow"  href="gonglue.html" title="购买攻略教程">购买攻略</a></li>
+        <li><a rel="nofollow" href="shuju.html" title="数据中心/机房">数据中心</a></li>
+        <li class="am-active"><a href="xinshou.html" title="新手教程">新手教程</a></li>
+        <li><a href="weilin.html" title="VPS加速">VPS加速</a></li>
+        <li><a rel="nofollow" href="pingce.html" title="评测体验">评测体验</a></li>
+        <li><a href="dongtai.html" title="优惠动态">优惠动态</a></li>
+        <li><a href="lianxi.html" title="联系我们" rel="nofollow">联系我们</a></li>
+       </ul>
+
+      </div>
+  </div>
+</header>
+
+<div class="am-g am-g-fixed blog-g-fixed">
+  <div class="am-u-md-8">
+    <ol class="am-breadcrumb">
+  <li><a href="index.html" class="am-icon-home" title="搬瓦工VPS购买指南首页" target="_blank">首页</a></li>
+  <li><a href="xinshou.html" title="搬瓦工新手教程" target="_blank">新手教程</a></li>
+  <li class="am-active">正文</li>
+</ol>
+  <h2><span class="am-icon-bookmark"></span> 搬瓦工主机建站系统配置：LNMP老牌一键WEB安装包安装Nginx/Apache引擎</h2>
+   <hr class="am-article-divider blog-hr">
+   <p>前面我们有分享到oneinstack一键脚本《 <a href="bwh-install-oneinstack.html">搬瓦工主机建站系统配置：Oneinstack一键快速安装LNMP/LAMP/LNMPA</a>》，其实在这个脚本之前，我们应该知道比较知名的LNMP一键安装脚本。这个脚本至今应该有十年左右时间，具体忘记了，反正每年都在更新升级。一般有一定运维能力的站长都会使用这个脚本，而不是使用WEB面板。LNMP一键WEB面板安装包适合在LINUX VPS主机环境中搭建NGINX、APACHE引擎建站的，是一款比较稳定的建站工具，个人觉得没有必要自己编译，直接使用这个脚本也是够用的。</p>
+   <p>每年，LNMP脚本会在六一节更新新的正式版本，包括在月初的时候有发布V1.6正式版。与oneinstack相比，LNMP相对较为稳妥，因为每一个版本在更新之前都会进行长达半年的公测，如果用户在使用公测版有什么问题，可以给予提出建议和意见，经过半年多测试后才会发布。而前者会在软件有升级或者作者认为有必要的提前下更新，有些时候我们用户都不知道已经升级。</p>
+   
+     <pre><abbr title="小提示">Tip：</abbr> LNMP一键包可以快速安装LNMP、LAMP WEB系统，支持PHP7.3版本。</pre>
+   <h3><span class="am-icon-angellist"></span> 第一、LNMP支持环境以及可安装的系统</h3>    
+   <p>LNMP一键脚本安装WEB建站环境，这么多年来发展我们可以看到算是目前市面上最多文档支持的脚本工具。而且你遇到的问题基本上可以在网上找到别人遇到的解决方案，这个也是大家选择LNMP脚本的原因之一。LNMP一键安装包是一个用Linux Shell编写的可以为CentOS/RHEL/Fedora/Aliyun/Amazon、Debian/Ubuntu/Raspbian/Deepin/Mint Linux VPS或独立主机安装LNMP(Nginx/MySQL/PHP)、LNMPA(Nginx/MySQL/PHP/Apache)、LAMP(Apache/MySQL/PHP)生产环境的Shell程序。</p>
+   <p>支持自定义Nginx、PHP编译参数及网站和数据库目录、支持生成LetseEcrypt证书、LNMP模式支持多PHP版本、支持单独安装Nginx/MySQL/MariaDB/Pureftpd服务器，同时提供一些实用的辅助工具如：虚拟主机管理、FTP用户管理、Nginx、MySQL/MariaDB、PHP的升级、常用缓存组件Redis/Xcache等的安装、重置MySQL root密码、502自动重启、日志切割、SSH防护DenyHosts/Fail2Ban、备份等许多实用脚本。</p>
+
+   <p>支持CentOS/RHEL/Fedora/Debian/Ubuntu/Raspbian/Deepin/Aliyun/Amazon/Mint Linux发行版，需要5GB以上硬盘剩余空间，MySQL 5.7,MariaDB 10至少9GB剩余空间，需要128MB以上内存(128MB小内存VPS,Xen需有SWAP,OpenVZ至少要有128MB以上的vSWAP或突发内存)，注意小内存请勿使用64位系统。安装MySQL 5.6或5.7及MariaDB 10必须1G以上内存，更高版本至少要2G内存。</p>
+   
+
+   <h3><span class="am-icon-angellist"></span> 第二、LNMP 一键包安装部署WEB环境过程</h3>
+<p>安装过程也是比较简单，直接根据下面安装过程进行安装。</p>
+  <p>1、LNMP安装环境（Nginx）</p>
+<p>wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz && tar zxf lnmp1.6.tar.gz && cd lnmp1.6 && ./install.sh lnmp</p>
+ <p>2、LAMP安装环境（Apache）</p>
+<p>wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz && tar zxf lnmp1.6.tar.gz && cd lnmp1.6 && ./install.sh lamp</p>
+<p>如果有担心在安装过程中服务器离线，我们可以在screen环境下安装。</p>
+<p><img src="static/picture/lnmp-16-1.jpg" alt="LNMP 一键包安装部署WEB环境过程" class="am-img-thumbnail am-radius"></p>
+<p>这我们需要选择数据库和版本，需要注意的是：MySQL 5.6,5.7及MariaDB 10必须在1G以上内存的更高配置上才能选择。然后我们需要设置数据库密码、开启数据库引擎。</p>
+<p><img src="static/picture/lnmp-16-2.jpg" alt="LNMP 一键包安装部署WEB环境过程" class="am-img-thumbnail am-radius"></p>
+<p>这里选择PHP版本，目前支持最高7.3版本，如果我们是WORDPRESS程序得的话，我个人建议用PHP7.3，虽然官方要求最低5.6，但是后面肯定必须要7.0+，而且7.0+的性能会好很多，速度快。</p>
+<p><img src="static/picture/lnmp-16-3.jpg" alt="LNMP 一键包安装部署WEB环境过程" class="am-img-thumbnail am-radius"></p>
+<p>这里我们还需要安装缓存工具。后面我们就任意键自动安装。</p>
+<p><img src="static/picture/lnmp-16-4.jpg" alt="LNMP 一键包安装部署WEB环境过程" class="am-img-thumbnail am-radius"></p>
+<p>安装完毕之后，我们可以看到上图，成功界面。这个过程需要根据服务器的性能，如果是SSD固态硬盘会快一些。有些性能差的可能需要半小时到一小时，其实这个安装过程也是在检测服务器性能的过程。</p>
+
+<h3><span class="am-icon-angellist"></span> 第三、lnmp 安装站点建站过程</h3>
+  <p>LNMP一键包安装完毕之后，我们需要重启服务器这样最终生效。完毕之后，我们就可以再次登入远程客户端XSHELL进行安装站点，这里有用到LNMP软件自带的工具。</p>
+  <p>1、添加站点</p>
+  <p>lnmp vhost add</p>
+  <p>然后我们根据提示进行建站。</p>
+ <p><img src="static/picture/lnmp-16-5.jpg" alt="lnmp 安装站点建站过程" class="am-img-thumbnail am-radius"></p>
+  <p>根据提示，我们进行输入域名，是否直接在向导中给站点设置数据库密码，如果这里不设置，我们也可以登录PHPMYADMIN设置数据库。同时，如果我们希望使用到免费SSL证书的话，需要先将域名先解析到当前服务器，这样才可以安装免费证书。</p>
+  <p>总结，LNMP一键安装包与我们前面熟悉的ONEINSTACK基本上差不多，只是各自用到的不同小工具不同，基本上都可以完成自己建站需求。</p>
+    <pre><abbr title="小提示">Tip：</abbr> 如果我们还需要了解其他搬瓦工VPS教程，可以参考<a href="xinshou.html" target="_blank"><abbr title="需要代购">新手教程</abbr></a>目录分类。</pre>
+  </div>
+
+  <div class="am-u-md-4 blog-sidebar">
+    <div class="am-panel-group">
+      <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">关于我们</div>
+        <div class="am-panel-bd">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搬瓦工VPS，一款性价比极高的便宜VPS主机方案，搬瓦工专注提供各种国内优化线路的VPS，包括美国洛杉矶CN2 GIA、香港CN2 GIA、日本CN2 GIA、日本软银等，线路稳定、速度快，商家靠谱，有自己研发的控制面板管理系统，功能非常全面，适合我们基础建站、搭建环境以及各种折腾应用。</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;建议：选择任何一款VPS，具体的使用效果一切以我们实际为准，而且要知晓付出的成本与我们的获得的产品相当就应该知足，且不要要求太高。</p>
+          <p>搬瓦工VPS优惠通知QQ群：<a href="https://jq.qq.com/" target="_blank" rel="nofollow noopener">点击进入</a>
+</p>
+         
+        </div>
+      </section>
+       <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">新手教程</div>
+         <ul class="am-list blog-list">
+          <li> <a href="" target="_blank">搬瓦工主机建站系统配置：LNMP老牌一键WEB安装包安装Nginx/Apache引擎</a></li>
+          <li><a href="bwh-install-oneinstack.html" target="_blank">搬瓦工主机建站系统配置：Oneinstack一键快速安装LNMP/LAMP/LNMPA</a></li>
+          <li> <a href="bwg.php?tag=bandwagonhost-upgrage-lnmp/" target="_blank">利用服务器建站升级面板和WEB环境需要注意的几个问题</a></li>
+          <li><a href="bwg.php?tag=bandwagonhost-speedtest/" target="_blank">6个实用方法检测服务器/主机速度和稳定性 决定选择与否</a></li>
+          <li><a href="webtools.html" target="_blank">Linux VPS服务器架设网站WEB系统可用的一键脚本软件整理</a></li>
+         <li> <a href="noallowip.html" target="_blank">搬瓦工VPS不提供免费更换IP服务 只能新购买IP地址</a></li>
+          <li> <a href="upramdisk.html" target="_blank">搬瓦工VPS流量和硬盘不够 如何升级配置</a></li>
+          <li><a href="cyberpanel.html" target="_blank">Linux VPS/服务器一键安装CyberPanel WEB面板</a></li>
+          <li> <a href="one-click-vnc.html" target="_blank">搬瓦工Linux服务器一键安装VNC可实现远程桌面</a></li>
+          <li><a href="bwg.php?tag=bandwagonhost-suspended/" target="_blank">搬瓦工服务器被限制suspended原因及解决办法</a></li>
+          <li> <a href="install-gnome.html" target="_blank">搬瓦工新增Mount ISO可挂载安装Linux GNOME远程桌面</a></li>
+          <li><a href="uptime.html" target="_blank">利用UptimeRobot工具实时监控搬瓦工VPS主机各机房在线率情况</a></li>
+         <li><a href="gonglue.html" target="_blank">新手用户搬瓦工VPS购买图文指导教程</a></li>
+        <li><a href="jichu.html" target="_blank">搬瓦工VPS基础应用篇 - 选择登录已购VPS方案</a></li>
+        <li><a href="anzhuang.html" target="_blank">搬瓦工VPS重新安装Linux系统过程及注意事项</a></li>  
+        <li><a href="genghuan.html" target="_blank">搬瓦工VPS自主任意更换机房实现换IP</a></li>
+        <li><a href="shengji.html" target="_blank">自助升级搬瓦工VPS主机方案方法</a></li>  
+        <li><a href="youhui.html" target="_blank">使用搬瓦工优惠码 让价格更低一点</a></li>  
+        <li><a href="install-wdcp.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(一) - 一键包安装WDCP面板</a></li>   
+        <li><a href="xufei.html" target="_blank">搬瓦工VPS续费、自动续费、取消续费几个问题</a></li> 
+        <li><a href="wdcp-addsite.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(二) - 添加站点和MYSQL数据库</a></li>
+        <li><a href="xuanzejifang.html" target="_blank">搬瓦工VPS主机选择机房和方案的几个建议</a></li>
+        <li><a href="tips.html" target="_blank">正确使用搬瓦工VPS主机的用途以及合理注意事项</a></li>
+        <li><a href="install-bt-panel.html" target="_blank">搬瓦工VPS快速安装BT宝塔Web面板</a></li>
+        <li><a href="kiwivm-panel.html" target="_blank">搬瓦工KiwiVM面板新手易用入门教学详细图文讲解</a></li>
+        <li><a href="dc6changedc.html" target="_blank">搬瓦工DC6/DC9配置方案切换机房有什么不同？</a></li>
+        <li><a href="plansdatacenter.html" target="_blank">搬瓦工5种套餐方案可切换全部机房整理大全 知道可换机房</a></li>
+        <li><a href="clearsystemcentos.html" target="_blank">实用 - CentOS/Debian/Ubuntu快速一键安装纯净版系统</a></li>
+        <li> <a href="bwg.php?tag=bandwaonhost-dd-windos/" target="_blank">搬瓦工VPS主机一键DD快速安装Windows8系统实现远程访问</a></li>
+        <li><a href="aboutrenewal.html" target="_blank">完整整理搬瓦工VPS服务器到期续费/自动续费/到期删除等问题</a></li>
+        </ul>
+      </section>
+             <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">搬瓦工选择建议</div>
+       <div class="am-panel-bd">
+          <p>1、目前有单个机房和多个机房区别，后者可以自己切换机房和IP，前者只有一个，不可以更换。</p>
+          <p>2、OPENVZ与KVM区别，如果需要速度好一些的，建议选择KVM架构，因为有BBR内核优化。</p>
+          <p>3、如果搭建网站用途，建议内存512MB及以上，以为安装面板或者一键包，基本需要这个配置。</p>
+         <p>4、搬瓦工VPS支持支付宝付款，无需找人代购，自己购买就可以。</p>
+         <p>5、目前洛杉矶CN2上线，电信直连，速度上提升不少，追求速度的可以选择洛杉矶CN2。</p>
+        </div>
+      </section>
+      <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">最新搬瓦工优惠码</div>
+        <div class="am-panel-bd">
+          <p>虽然搬瓦工VPS已经算是比较便宜的了，但是为了迎合各种大家的兴趣和省钱的心态，还是会分享一些优惠码折扣让大家使用的，比如当前最低的大约在6.5%左右。</p>
+          <p>A - BWHCGLUKKB（优惠力度 6.77%）</p>
+          <p>B - BWH3OGRI2BMW（优惠力度 5.83%）</p>
+          <p>C - ireallyreadtheterms8（优惠力度 5.5%）</p>
+          <p>D - BWH3MNP2CG5J（优惠力度 5.39%）</p>
+          <p>E - BWH38ZU9VDKP（优惠力度 4.8%）</p>
+          <p>这是<a href="index.html">搬瓦工中文网</a>整理的最新的5个折扣码，我们可以选择A优先使用，每单可以节省几块钱。具体如何使用可以参考<a href="youhui.html" target="_blank">这里</a>，激活使用。</p>
+         
+        </div>
+      </section>
+    </div>
+  </div>
+</div><footer class="blog-footer">
+<hr data-am-widget="divider" style="" class="am-divider am-divider-default">
+  <p>
+    <small>CopyRight © 2015-2025 <a href="/index.html" rel="nofollow">搬瓦工vps指南</a> bwgvps-cn.org<br>搬瓦工vps服务器购买资讯 <a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">ICP证000861号</a><br>搬瓦工VPS购买指南本网站-提供方便新手用户的阅读文档技术支持。</small>
+
+  </p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="static/js/jquery.min1.js"></script>
+<script src="static/js/modernizr.js"></script>
+<script src="style/js/polyfill/rem.min.js"></script>
+<script src="style/js/polyfill/respond.min.js"></script>
+<script src="style/js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/amazeui.min.js"></script>
+<script src="static/js/zdy.js"></script><!--<![endif]-->
+
+</body>
+</html>

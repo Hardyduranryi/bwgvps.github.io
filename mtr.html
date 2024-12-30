@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>Linux服务器路由追踪工具 - 在线traceroute和Best Trace - 搬瓦工VPS</title>
+<meta name="keywords" content="Linux线路测试,Linux Traceroute">
+<meta name="description" content="经常有网友看到搬瓦工中文网对于Linux服务器进行评测的一些工具比较感兴趣，比如我们有看到或者在寻找Linux服务器有希望测试路由线路的。因为即便商家吹嘘的多么好，评测网站也有介绍的如何如何，但是实际上可能并不是这样子的。">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  
+  <link rel="stylesheet" href="static/css/amazeui.min.css">
+  <link rel="stylesheet" href="static/css/default.css">  
+</head>
+<body>
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <div class="am-topbar-brand">
+      <a href="index.html" title="搬瓦工 - 搬瓦工vps服务器指南" rel="nofollow">搬瓦工</a>
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li><a href="index.html" title="网站首页">网站首页</a></li>
+        <li><a rel=”nofollow“ href="fangan.html" title="VPS方案">项目方案</a></li>
+        <li><a rel="nofollow"  href="gonglue.html" title="购买攻略教程">购买攻略</a></li>
+        <li><a rel="nofollow" href="shuju.html" title="数据中心/机房">数据中心</a></li>
+        <li class="am-active"><a href="xinshou.html" title="新手教程">新手教程</a></li>
+        <li><a href="weilin.html" title="VPS加速">VPS加速</a></li>
+        <li><a rel="nofollow" href="pingce.html" title="评测体验">评测体验</a></li>
+        <li><a href="dongtai.html" title="优惠动态">优惠动态</a></li>
+        <li><a href="lianxi.html" title="联系我们" rel="nofollow">联系我们</a></li>
+       </ul>
+
+      </div>
+  </div>
+</header>
+
+<div class="am-g am-g-fixed blog-g-fixed">
+  <div class="am-u-md-8">
+    <ol class="am-breadcrumb">
+  <li><a href="index.html" class="am-icon-home" title="搬瓦工VPS购买指南首页" target="_blank">首页</a></li>
+  <li><a href="xinshou.html" title="搬瓦工新手教程" target="_blank">新手教程</a></li>
+  <li class="am-active">正文</li>
+</ol>
+  <h2><span class="am-icon-bookmark"></span> Linux服务器路由追踪工具 - 在线traceroute和BestTrace</h2>
+   <hr class="am-article-divider blog-hr">
+   <p>经常有网友看到<a href="index.html">搬瓦工中文网</a>对于Linux服务器进行评测的一些工具比较感兴趣，比如我们有看到或者在寻找Linux服务器有希望测试路由线路的。因为即便商家吹嘘的多么好，评测网站也有介绍的如何如何，但是实际上可能并不是这样子的。因为有很多主机商在开始发布产品的时候确实是线路优秀的，但是后面随着商家的发展，和线路也会调整的。所以，我们在购买服务器之后需要自己测试当前的线路是不是正如商家或者评测网站说的那样。</p>
+   <p>比如，我们在购买到搬瓦工VPS主机之后，《 <a href="fangan.html">搬瓦工VPS推荐方案</a>》，肯定也会针对当前购买的服务器进行测试。在测试工具中，肯定会有用到路由追踪这款工具，这个工具的用途就是可以看看，当前服务器的测试节点在我们本地线路中的走势，或者是我们可以看看网络公开的节点测试线路，这样我们可以大概了解这台服务器的线路情况。</p>
+   <p>比如，我们看到常用的DC6、DC9 CN2 GIA线路，我们好歹去看看是不是这样子的。因为，我们经常看到一些商家吹嘘是走的CN2 GIA线路，但是实际上并不是这样子的，因为线路的走势商家是无法作假的，我们从网上测试就可以看到。</p>
+  
+   <pre><abbr title="小提示">Tip：</abbr> 在这篇文章中，我们看看两款常用的路由追踪测试工具。</pre>
+   <h3><span class="am-icon-angellist"></span> 第一、本地路由追踪工具BestTrace</h3>
+   <p>BestTrace工具下载地址：https://www.ipip.net/product/client.html</p>
+   <p>这款工具我们还是比较常用的，比如我们可以下载到本地电脑中，然后输入服务器的IP地址，可以检测到我们当前网络到服务器的线路情况。我们可能有见过WINMTR这款工具，但是这款工具完全是IP过程，而BestTrace工具是可以看到图示走向的，当然有些时候由于IP地址没有进入IP库真实地址，所以走向有些偏差，不过大部分时候是正确的。</p>
+   <p><img src="static/picture/trace-1.jpg" alt="本地路由追踪工具BestTrace"></p>
+      <p>我们可以从上图看到，笔者用DC6 CN2 GIA测试IP地址进行的路由追踪，可以看到我这边是电信用户，走的确实是CN2优化线路。同理，我们也可以将软件放到其他测试节点服务器中，然后点对点测试节点到服务器的线路走势情况。一般，我们会测试目标用户地域与服务器地区的线路走向，或者我们也可以让这些地区的用户下载软件然后测试。</p>
+      
+<h3><span class="am-icon-angellist"></span> 第二、在线多节点测试traceroute</h3>
+<p>在线节点测试路由：https://tools.ipip.net/traceroute.php</p>
+<p><img src="static/picture/trace-2.jpg" alt="在线多节点测试traceroute"></p>
+<p>同样的，我们可以在这个工具中选择百多个节点，然后测试当前服务器IP地址到这个节点的测试速度。比如我测试的是安徽节点，然后到DC6 CN2 GIA的线路，看到是走上海的CN2节点出去的。这样可以判断到当前DC6确实是走的CN2线路。从59.43.**就知道是CN2线路，所以商家没有骗我们。</p>
+<h3><span class="am-icon-angellist"></span> 第三、WEBKAKA在线测试路由追踪线路</h3>
+<p>工具地址：http://www.webkaka.com/Tracert.aspx</p>
+<p><img src="static/picture/trace-3.jpg" alt="WEBKAKA在线测试"></p>
+<p>这个是来自WEBKAKA的工具，也是提供在线路由测试。因为我们在测试的时候也不能过分依赖一个工具，我们可以多个工具和节点一起测试。如果我们准备购买搬瓦工VPS的时候可以先进行测试商家提供的节点。《 <a href="shuju.html">搬瓦工VPS主机数据中心对比</a>》，一般我们还是建议用DC6或者是DC8，有条件的可以选择高富帅的香港PCCW线路。</p>
+    <pre><abbr title="小提示">Tip：</abbr> 如果我们还需要了解其他搬瓦工VPS教程，可以参考<a href="xinshou.html" target="_blank"><abbr title="需要代购">新手教程</abbr></a>目录分类。</pre>
+  </div>
+
+  <div class="am-u-md-4 blog-sidebar">
+    <div class="am-panel-group">
+      <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">关于我们</div>
+        <div class="am-panel-bd">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搬瓦工VPS，一款性价比极高的便宜VPS主机方案，搬瓦工专注提供各种国内优化线路的VPS，包括美国洛杉矶CN2 GIA、香港CN2 GIA、日本CN2 GIA、日本软银等，线路稳定、速度快，商家靠谱，有自己研发的控制面板管理系统，功能非常全面，适合我们基础建站、搭建环境以及各种折腾应用。</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;建议：选择任何一款VPS，具体的使用效果一切以我们实际为准，而且要知晓付出的成本与我们的获得的产品相当就应该知足，且不要要求太高。</p>
+          <p>搬瓦工VPS优惠通知QQ群：<a href="https://jq.qq.com/" target="_blank" rel="nofollow noopener">点击进入</a>
+</p>
+         
+        </div>
+      </section>
+        <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">新手教程</div>
+        <ul class="am-list blog-list">
+          <li><a href="bwg.php?tag=bandwagonhost-install-bt/" target="_blank">搬瓦工主机建站系统配置：全新安装宝塔面板快速搭建LNMP/LAMP可视化面板</a></li>
+          <li><a href="" target="_blank">Linux服务器路由追踪工具 - 在线traceroute和BestTrace</a></li>
+          <li><a href="bwh-install-appnode.html" target="_blank">搬瓦工主机建站系统配置：安装APPNode面板实现服务器集群管理</a></li>
+          <li> <a href="bwh-install-lnmp.html" target="_blank">搬瓦工主机建站系统配置：LNMP老牌一键WEB安装包安装Nginx/Apache引擎</a></li>
+          <li><a href="bwh-install-oneinstack.html" target="_blank">搬瓦工主机建站系统配置：Oneinstack一键快速安装LNMP/LAMP/LNMPA</a></li>
+          <li> <a href="bwg.php?tag=bandwagonhost-upgrage-lnmp/" target="_blank">利用服务器建站升级面板和WEB环境需要注意的几个问题</a></li>
+          <li><a href="bwg.php?tag=bandwagonhost-speedtest/" target="_blank">6个实用方法检测服务器/主机速度和稳定性 决定选择与否</a></li>
+          <li><a href="webtools.html" target="_blank">Linux VPS服务器架设网站WEB系统可用的一键脚本软件整理</a></li>
+         <li> <a href="noallowip.html" target="_blank">搬瓦工VPS不提供免费更换IP服务 只能新购买IP地址</a></li>
+          <li> <a href="upramdisk.html" target="_blank">搬瓦工VPS流量和硬盘不够 如何升级配置</a></li>
+          <li><a href="cyberpanel.html" target="_blank">Linux VPS/服务器一键安装CyberPanel WEB面板</a></li>
+          <li> <a href="one-click-vnc.html" target="_blank">搬瓦工Linux服务器一键安装VNC可实现远程桌面</a></li>
+          <li><a href="bwg.php?tag=bandwagonhost-suspended/" target="_blank">搬瓦工服务器被限制suspended原因及解决办法</a></li>
+          <li> <a href="install-gnome.html" target="_blank">搬瓦工新增Mount ISO可挂载安装Linux GNOME远程桌面</a></li>
+          <li><a href="uptime.html" target="_blank">利用UptimeRobot工具实时监控搬瓦工VPS主机各机房在线率情况</a></li>
+         <li><a href="gonglue.html" target="_blank">新手用户搬瓦工VPS购买图文指导教程</a></li>
+        <li><a href="jichu.html" target="_blank">搬瓦工VPS基础应用篇 - 选择登录已购VPS方案</a></li>
+        <li><a href="anzhuang.html" target="_blank">搬瓦工VPS重新安装Linux系统过程及注意事项</a></li>  
+        <li><a href="genghuan.html" target="_blank">搬瓦工VPS自主任意更换机房实现换IP</a></li>
+        <li><a href="shengji.html" target="_blank">自助升级搬瓦工VPS主机方案方法</a></li>  
+        <li><a href="youhui.html" target="_blank">使用搬瓦工优惠码 让价格更低一点</a></li>  
+        <li><a href="install-wdcp.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(一) - 一键包安装WDCP面板</a></li>   
+        <li><a href="xufei.html" target="_blank">搬瓦工VPS续费、自动续费、取消续费几个问题</a></li> 
+        <li><a href="wdcp-addsite.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(二) - 添加站点和MYSQL数据库</a></li>
+        <li><a href="xuanzejifang.html" target="_blank">搬瓦工VPS主机选择机房和方案的几个建议</a></li>
+        <li><a href="tips.html" target="_blank">正确使用搬瓦工VPS主机的用途以及合理注意事项</a></li>
+        <li><a href="install-bt-panel.html" target="_blank">搬瓦工VPS快速安装BT宝塔Web面板</a></li>
+        <li><a href="kiwivm-panel.html" target="_blank">搬瓦工KiwiVM面板新手易用入门教学详细图文讲解</a></li>
+        <li><a href="dc6changedc.html" target="_blank">搬瓦工DC6/DC9配置方案切换机房有什么不同？</a></li>
+        <li><a href="plansdatacenter.html" target="_blank">搬瓦工5种套餐方案可切换全部机房整理大全 知道可换机房</a></li>
+        <li><a href="clearsystemcentos.html" target="_blank">实用 - CentOS/Debian/Ubuntu快速一键安装纯净版系统</a></li>
+        <li> <a href="bwg.php?tag=bandwaonhost-dd-windos/" target="_blank">搬瓦工VPS主机一键DD快速安装Windows8系统实现远程访问</a></li>
+        <li><a href="aboutrenewal.html" target="_blank">完整整理搬瓦工VPS服务器到期续费/自动续费/到期删除等问题</a></li>
+        </ul>
+      </section>
+             <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">搬瓦工选择建议</div>
+       <div class="am-panel-bd">
+          <p>1、目前有单个机房和多个机房区别，后者可以自己切换机房和IP，前者只有一个，不可以更换。</p>
+          <p>2、OPENVZ与KVM区别，如果需要速度好一些的，建议选择KVM架构，因为有BBR内核优化。</p>
+          <p>3、如果搭建网站用途，建议内存512MB及以上，以为安装面板或者一键包，基本需要这个配置。</p>
+         <p>4、搬瓦工VPS支持支付宝付款，无需找人代购，自己购买就可以。</p>
+         <p>5、目前洛杉矶CN2上线，电信直连，速度上提升不少，追求速度的可以选择洛杉矶CN2。</p>
+        </div>
+      </section>
+      <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">最新搬瓦工优惠码</div>
+        <div class="am-panel-bd">
+          <p>虽然搬瓦工VPS已经算是比较便宜的了，但是为了迎合各种大家的兴趣和省钱的心态，还是会分享一些优惠码折扣让大家使用的，比如当前最低的大约在6.5%左右。</p>
+          <p>A - BWHCGLUKKB（优惠力度 6.77%）</p>
+          <p>B - BWH3OGRI2BMW（优惠力度 5.83%）</p>
+          <p>C - ireallyreadtheterms8（优惠力度 5.5%）</p>
+          <p>D - BWH3MNP2CG5J（优惠力度 5.39%）</p>
+          <p>E - BWH38ZU9VDKP（优惠力度 4.8%）</p>
+          <p>这是<a href="index.html">搬瓦工中文网</a>整理的最新的5个折扣码，我们可以选择A优先使用，每单可以节省几块钱。具体如何使用可以参考<a href="youhui.html" target="_blank">这里</a>，激活使用。</p>
+         
+        </div>
+      </section>
+    </div>
+  </div>
+</div><footer class="blog-footer">
+<hr data-am-widget="divider" style="" class="am-divider am-divider-default">
+  <p>
+    <small>CopyRight © 2015-2025 <a href="/index.html" rel="nofollow">搬瓦工vps指南</a> bwgvps-cn.org<br>搬瓦工vps服务器购买资讯 <a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">ICP证000861号</a><br>搬瓦工VPS购买指南本网站-提供方便新手用户的阅读文档技术支持。</small>
+
+  </p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="static/js/jquery.min1.js"></script>
+<script src="static/js/modernizr.js"></script>
+<script src="style/js/polyfill/rem.min.js"></script>
+<script src="style/js/polyfill/respond.min.js"></script>
+<script src="style/js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/amazeui.min.js"></script>
+<script src="static/js/zdy.js"></script><!--<![endif]-->
+
+</body>
+</html>

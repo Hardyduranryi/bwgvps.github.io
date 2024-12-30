@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>最近搬瓦工CN2线路不稳定原因和解决策略 - 搬瓦工VPS</title>
+<meta name="keywords" content="CN2不稳定">
+<meta name="description" content="最近搬瓦工CN2线路不稳定原因和解决策略">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  
+  <link rel="stylesheet" href="static/css/amazeui.min.css">
+  <link rel="stylesheet" href="static/css/default.css">  
+</head>
+<body>
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <div class="am-topbar-brand">
+      <a href="index.html" title="搬瓦工 - 搬瓦工vps服务器指南" rel="nofollow">搬瓦工</a>
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li><a href="index.html" title="网站首页">网站首页</a></li>
+        <li><a rel=”nofollow“ href="fangan.html" title="VPS方案">项目方案</a></li>
+        <li><a rel="nofollow"  href="gonglue.html" title="购买攻略教程">购买攻略</a></li>
+        <li><a rel="nofollow" href="shuju.html" title="数据中心/机房">数据中心</a></li>
+        <li><a rel="nofollow" href="xinshou.html" title="新手教程">新手教程</a></li>
+        <li><a href="weilin.html" title="VPS加速">VPS加速</a></li>
+        <li><a rel="nofollow" href="pingce.html" title="评测体验">评测体验</a></li>
+        <li class="am-active"><a href="dongtai.html" title="优惠动态">优惠动态</a></li>
+        <li><a href="lianxi.html" title="联系我们" rel="nofollow">联系我们</a></li>
+       </ul>
+
+      </div>
+  </div>
+</header>
+
+<div class="am-g am-g-fixed blog-g-fixed">
+  <div class="am-u-md-8">
+  <h2><span class="am-icon-bookmark"></span> 最近搬瓦工CN2线路不稳定原因和解决策略</h2>
+   <hr class="am-article-divider blog-hr">
+   <p>最近我们网友有没有发现，包括搬瓦工/Bandwagonhost商家在内的服务商，尤其是CN2线路速度变得非常的慢。我们在使用<a href="index.html" target="_blank">搬瓦工VPS</a>商家的CN2机器的时候更是如此。甚至都不如普通KVM机房的线路方案，这个到底是什么问题呢？难道跟一样一样，线路又不行了，需要等待新的线路出现。因为早期我们在使用的时候，MC、QNET等洛杉矶线路都有过辉煌的，后来都变慢。</p>
+   <p>这次并不是这个问题，主要原因在于CN2线路的海底光缆出现故障，正在抢修中。预计今天会解决，目前看来也在陆续恢复。其实，我们应该有注意到，搬瓦工VPS商家的CN2 GIA方案都取消购买，不过也在陆续恢复。</p>
+   <pre><abbr title="小提示">Tip：我们目前能做的和商家一样，只能等待维修。这个不是商家问题。</abbr> </pre>
+   <p>在这篇文章中，我们一起分享看看线路出现的故障原因以及解决策略。</p>
+   <h3><span class="am-icon-angellist"></span> 第一、CN2线路故障问题</h3>
+   <p>Customers from China may experience packet loss when accessing any resources in USA due to a submarine (TPE) cable cut. We do not currently have an ETA when this will be fixed.
+We will be temporarily re-routing traffic to reduce packet loss.
+
+UPDATE: We have re-routed the majority of affected traffic to our backup/failover links and most of the packet loss issues have been resolved. We will continue monitoring the situation and will restore previous (more direct) routing once submarine cable has been repaired.
+
+FINAL UPDATE: We have not observed any issues in the last 24 hours. Original routing has been restored. We are closing this issue at this time.
+</p>
+<p><img src="static/picture/2018102201.jpg" class="am-img-thumbnail am-radius" title="搬瓦工CN2线路故障"></p>
+   <p>这个信息我们在搬瓦工VPS商家官方网站监控频道可以看到的，需要等待回复。</p>
+   <h3><span class="am-icon-angellist"></span> 第二、解决策略</h3>
+   
+  <p>1、更换机房</p>
+  <p>如果我们购买的CN2 GT或者CN2 GIA线路是多机房的，一般都是多机房方案。我们可以切换到普通的线路暂时先用就可以了。参考： <a href="cn2-to-changedc.html">洛杉矶CN2线路方案切换其他KVM普通机房</a></p>等陆续恢复之后，我们再迁移回原来的CN2 GT或者是CN2 GIA。刚才已经检测到已经在陆续恢复。
+    
+  <p>2、等待恢复</p>
+  <p>这个故障并不是商家导致的，所有的CN2线路商家都有这个问题。我们唯独能做的就是等待抢修。预计这两天会全部恢复，我们到时候就可以使用。</p>
+  <p>3、香港机房</p>
+  <p>我们可以选择香港机房，目前香港速度是最好的，不过成本稍微高一些。</p>
+  <p>总之，这次CN2线路的故障是没有办法预估和人为去解决的，只有等待恢复。</p>
+    <pre><abbr title="小提示">Tip：</abbr> 如果我们还需要了解其他搬瓦工VPS教程，可以参考<a href="xinshou.html" target="_blank"><abbr title="需要代购">新手教程</abbr></a>目录分类。</pre>
+  </div>
+
+  <div class="am-u-md-4 blog-sidebar">
+    <div class="am-panel-group">
+      <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">关于我们</div>
+        <div class="am-panel-bd">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搬瓦工VPS，一款性价比极高的便宜VPS主机方案，搬瓦工专注提供各种国内优化线路的VPS，包括美国洛杉矶CN2 GIA、香港CN2 GIA、日本CN2 GIA、日本软银等，线路稳定、速度快，商家靠谱，有自己研发的控制面板管理系统，功能非常全面，适合我们基础建站、搭建环境以及各种折腾应用。</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;建议：选择任何一款VPS，具体的使用效果一切以我们实际为准，而且要知晓付出的成本与我们的获得的产品相当就应该知足，且不要要求太高。</p>
+          <p>搬瓦工VPS优惠通知QQ群：<a href="https://jq.qq.com/" target="_blank" rel="nofollow noopener">点击进入</a>
+</p>
+         
+        </div>
+      </section>
+       <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">新手教程</div>
+        <ul class="am-list blog-list">
+         <li><a href="gonglue.html" target="_blank">新手用户搬瓦工VPS购买图文指导教程</a></li>
+        <li><a href="jichu.html" target="_blank">搬瓦工VPS基础应用篇 - 选择登录已购VPS方案</a></li>
+        <li><a href="anzhuang.html" target="_blank">搬瓦工VPS重新安装Linux系统过程及注意事项</a></li>  
+        <li><a href="genghuan.html" target="_blank">搬瓦工VPS自主任意更换机房实现换IP</a></li>
+        <li><a href="shengji.html" target="_blank">自助升级搬瓦工VPS主机方案方法</a></li>  
+        <li><a href="youhui.html" target="_blank">使用搬瓦工优惠码 让价格更低一点</a></li>  
+        <li><a href="install-wdcp.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(一) - 一键包安装WDCP面板</a></li>   
+        <li><a href="xufei.html" target="_blank">搬瓦工VPS续费、自动续费、取消续费几个问题</a></li> 
+        <li><a href="wdcp-addsite.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(二) - 添加站点和MYSQL数据库</a></li>
+        <li><a href="xuanzejifang.html" target="_blank">搬瓦工VPS主机选择机房和方案的几个建议</a></li>
+        <li><a href="tips.html" target="_blank">正确使用搬瓦工VPS主机的用途以及合理注意事项</a></li>
+        <li><a href="install-bt-panel.html" target="_blank">搬瓦工VPS快速安装BT宝塔Web面板</a></li>
+        </ul>
+      </section>
+             <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">搬瓦工选择建议</div>
+       <div class="am-panel-bd">
+          <p>1、目前有单个机房和多个机房区别，后者可以自己切换机房和IP，前者只有一个，不可以更换。</p>
+          <p>2、OPENVZ与KVM区别，如果需要速度好一些的，建议选择KVM架构，因为有BBR内核优化。</p>
+          <p>3、如果搭建网站用途，建议内存512MB及以上，以为安装面板或者一键包，基本需要这个配置。</p>
+         <p>4、搬瓦工VPS支持支付宝付款，无需找人代购，自己购买就可以。</p>
+         <p>5、目前洛杉矶CN2上线，电信直连，速度上提升不少，追求速度的可以选择洛杉矶CN2。</p>
+        </div>
+      </section>
+      <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">最新搬瓦工优惠码</div>
+        <div class="am-panel-bd">
+          <p>虽然搬瓦工VPS已经算是比较便宜的了，但是为了迎合各种大家的兴趣和省钱的心态，还是会分享一些优惠码折扣让大家使用的，比如当前最低的大约在6.5%左右。</p>
+          <p>A - BWHCGLUKKB（优惠力度 6.77%）</p>
+          <p>B - BWH3OGRI2BMW（优惠力度 5.83%）</p>
+          <p>C - ireallyreadtheterms8（优惠力度 5.5%）</p>
+          <p>D - BWH3MNP2CG5J（优惠力度 5.39%）</p>
+          <p>E - BWH38ZU9VDKP（优惠力度 4.8%）</p>
+          <p>这是<a href="index.html">搬瓦工中文网</a>整理的最新的5个折扣码，我们可以选择A优先使用，每单可以节省几块钱。具体如何使用可以参考<a href="youhui.html" target="_blank">这里</a>，激活使用。</p>
+         
+        </div>
+      </section>
+    </div>
+  </div>
+</div><footer class="blog-footer">
+<hr data-am-widget="divider" style="" class="am-divider am-divider-default">
+  <p>
+    <small>CopyRight © 2015-2025 <a href="/index.html" rel="nofollow">搬瓦工vps指南</a> bwgvps-cn.org<br>搬瓦工vps服务器购买资讯 <a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">ICP证000861号</a><br>搬瓦工VPS购买指南本网站-提供方便新手用户的阅读文档技术支持。</small>
+
+  </p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="static/js/jquery.min1.js"></script>
+<script src="static/js/modernizr.js"></script>
+<script src="/style/js/polyfill/rem.min.js"></script>
+<script src="/style/js/polyfill/respond.min.js"></script>
+<script src="/style/js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/amazeui.min.js"></script>
+<script src="static/js/zdy.js"></script><!--<![endif]-->
+
+</body>
+</html>

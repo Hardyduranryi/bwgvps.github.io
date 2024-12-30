@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>Linux VPS服务器架设网站WEB系统可用的一键脚本软件整理 - 搬瓦工VPS</title>
+<meta name="keywords" content="Linux建站工具,web搭建网站,服务器建站">
+<meta name="description" content="根据之前在群里的调查发现，在这篇文章中我们将整理出来在国内站长中选择和使用在服务器中架设WEB系统，然后建站用的一些工具。这里整理出来的工具不分排名先后，都是我们在群里调查出来的真实数据，我们看看自己有没有使用过这些脚本或者软件工具。">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  
+  <link rel="stylesheet" href="static/css/amazeui.min.css">
+  <link rel="stylesheet" href="static/css/default.css">  
+</head>
+<body>
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <div class="am-topbar-brand">
+      <a href="index.html" title="搬瓦工 - 搬瓦工vps服务器指南" rel="nofollow">搬瓦工</a>
+    </div>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only" data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li><a href="index.html" title="网站首页">网站首页</a></li>
+        <li><a rel=”nofollow“ href="fangan.html" title="VPS方案">项目方案</a></li>
+        <li><a rel="nofollow"  href="gonglue.html" title="购买攻略教程">购买攻略</a></li>
+        <li><a rel="nofollow" href="shuju.html" title="数据中心/机房">数据中心</a></li>
+        <li class="am-active"><a href="xinshou.html" title="新手教程">新手教程</a></li>
+        <li><a href="weilin.html" title="VPS加速">VPS加速</a></li>
+        <li><a rel="nofollow" href="pingce.html" title="评测体验">评测体验</a></li>
+        <li><a href="dongtai.html" title="优惠动态">优惠动态</a></li>
+        <li><a href="lianxi.html" title="联系我们" rel="nofollow">联系我们</a></li>
+       </ul>
+
+      </div>
+  </div>
+</header>
+
+<div class="am-g am-g-fixed blog-g-fixed">
+  <div class="am-u-md-8">
+    <ol class="am-breadcrumb">
+  <li><a href="index.html" class="am-icon-home" title="搬瓦工VPS购买指南首页" target="_blank">首页</a></li>
+  <li><a href="xinshou.html" title="搬瓦工新手教程" target="_blank">新手教程</a></li>
+  <li class="am-active">正文</li>
+</ol>
+  <h2><span class="am-icon-bookmark"></span> Linux VPS服务器架设网站WEB系统可用的一键脚本软件整理</h2>
+   <hr class="am-article-divider blog-hr">
+   <p>根据之前我们<a href="index.html">搬瓦工中文网</a>的调查发现，大部分网友选择VPS主机还是用来建站用途的，其次是用来各种学习和折腾使用。对于我们大部分网友来说，利用服务器建站还是比较简单的，如今我们可以看到有很多开源、免费的一键安装软件工具，有些高手站长还会自己编译WEB环境使用。相对而言，我们可以看到在我们国内的站长建站环境中提供的工具还是比较多的，我们网友还是乐于分享。</p>
+   <p>根据之前在群里的调查发现，在这篇文章中我们将整理出来在国内站长中选择和使用在服务器中架设WEB系统，然后建站用的一些工具。这里整理出来的工具不分排名先后，都是我们在群里调查出来的真实数据，我们看看自己有没有使用过这些脚本或者软件工具。同时，如果我们觉得别人用的哪款软件是否不错，然后自己在其他项目中有没有必要更换一个其他软件试试。</p>
+   <p>这里有一个小贴士，如果我们用户习惯用哪款软件的时候，在生产环境中就建议一直使用，我们可以在测试服务器中测试新的WEB环境，待到熟练操作之后才去更换，因为不同的软件有不同的优势和特点，有些时候可能适合别人不一定适合你自己。</p>
+  <p><img src="static/picture/webtool.jpg" alt="Linux VPS服务器架设网站WEB系统可用的一键脚本软件整理" class="am-img-thumbnail am-radius"></p>
+   <pre><abbr title="小提示">Tip：</abbr> 一般对于网友来说，可能喜欢带有可视化面板的工具，但是我个人还是喜欢无面板的。</pre>
+   <h3><span class="am-icon-angellist"></span> 第一、宝塔面板工具</h3>    
+   <p>宝塔软件，有提供基于LiNUX和Windows两种WEB系统，前者一直有在维护更新，后者更新有点慢。这款软件开发至今大约3年左右时间，最近几年发展比较快的原因在于确实有提供适合大部分国内用户体验的后端界面和开发速度，可以听取社区的网友建议和意见，然后整合到软件中。同时，也在于其他的软件开发速度不快，甚至有些软件服务商由于缺少资源和经费，且没有盈利模式逐渐的减缓开发，这样也给予宝塔面板一些机会。</p>
+   <p>目前，宝塔面板大部分功能还是免费的，有部分安全或者软件功能是需要单独购买付费版本的，至少从目前来说对于大部分用户是可以使用没有问题，以后不清楚是否会走其他软件的老路，至少我们可以现在用着。</p>
+   <p>安装方法：</p>
+<p>yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && bash install.sh</p>
+<p>这里，建议安装宝塔面板的时候用centos7+系统，兼容性比较好。</p>
+<p>Windows版本：http://download.bt.cn/win/panel/BtSoft.zip</p>
+<p>刚才看到WIN系统版本也比较新，2019年4月份更新的，这个安装起来也很简单，直接安装就可以，建议在2008或者2012系统安装。</p>
+<h3><span class="am-icon-angellist"></span> 第二、CyberPanel WEB面板</h3>
+<p>CyberPanel WEB面板是基于Openlitespeed官方开发的面板，只能在Linux系统中安装的可视化面板，开发至今应该有2年不到的时间，功能上基本建站功能是可以满足的。我们也有在 <a href="cyberpanel.html">Linux VPS/服务器一键安装CyberPanel WEB面板</a>文章中有专门的介绍，但是在国内用户中使用不多，其原因是产品宣传力度不大，所以大家使用的也不是很多，还有可能对于一些中文文档支持不多，担心在使用后会发现一些问题无法解决，不过我自己测试后发现功能还是挺全的，其中还有我们大家希望使用的邮局和自建DNS功能。</p>
+<p>sh <(curl https://cyberpanel.net/install.sh || wget -O - https://cyberpanel.net/install.sh)</p>
+<p>我们可以在常规的LINUX系统中安装，可以选择多PHP版本的支持，可以选择简体中文语言，采用的是LITESPEED架构，相对来说比较轻量化，如果服务器配置不是很高的可以使用这个工具。</p>
+
+<h3><span class="am-icon-angellist"></span> 第三、LNMP一键安装脚本</h3>
+<p>虽然我们大家都知道，LiNUX、NGINX、MYSQL、PHP都习惯称作为LNMP，但是作为比较有代表性的军哥开发的LNMP脚本至今已经好多年了，反正我在接触VPS的时候就有在使用他们家的脚本，每年六一儿童节会发布新的正式版本更新，即将到来的六一儿童节会更新V1.6版本，如果我们有需要的话可以到时候下载安装。这款软件是比较成熟的LNMP无面板环境，对于我们站长来说可能需要的业务能力需要强一些，因为全部采用的是SHELL命令操作。可能不是特别适合初级用户。</p>
+<p>wget http://soft.vpser.net/lnmp/lnmp1.5.tar.gz -cO lnmp1.5.tar.gz && tar zxf lnmp1.5.tar.gz && cd lnmp1.5 && ./install.sh lnmp</p>
+<p>以上是1.5版本的安装，如果需要最新版本的话可以到官方网站看看。支持现有的LINUX系统多个版本，但是需要注意的是如果我们MYSQL需要在5.6以上，那就需要内存配置在1GB以上，这个我们有在" <a href="wdcp-512mb-php.html">解决搬瓦工安装WDCP内存不足问题 重新编译PHP</a>"这篇文章遇到的问题也是一样的，512MB内存如今已经很少有使用来建站用途，MYSQL版本较高需要1GB内存支持。</p>
+<h3><span class="am-icon-angellist"></span> 第四、Oneinstack一键安装脚本</h3>
+<p>Oneinstack这个脚本是在最近几年出现的，才开始的时候可以看到有比较强模仿LNMP脚本的痕迹，但是后来在重构之后有自己的特点，可以多方面的组合安装LNMP、LAMP、lnmpa、lnmh等等常规的组合，支持Nginx处理静态，Tomcat（JDK）处理JAVA。反正基本上涵盖我们需要的在LINUX服务器中配置WEB的环境。相比LNMP脚本来说，灵活性更强一些，易用性也好一些，如果你在LNMP使用感觉枯燥的时候也可体验看看这个脚本。</p>
+<p>目前，Oneinstack相对是比较成熟的，最近看到有增加安全防护功能，有提供快速安装和自定义安装，而且提供的官方文档以及用户免费分享的文档也是比较多的。这里顺带说下，LNMP提供的文档也是很多，毕竟这么多年的积累。</p>
+<h3><span class="am-icon-angellist"></span> 第五、WDCP WEB面板</h3>
+<p>我相信很多老站长都有使用过WDCP面板，这个面板可以说一手好牌居然打成这样。当初大部分的LINUX WEB可视化面板都是WDCP的，即便体验不好，而且有很多问题，但是很多用户也给予宽容且提供第三方的支持文档。但是WDCP官方在解散团队之后开发力不足，后来才给了宝塔面板这样的机会，虽然目前看到商家也有在准备重新布局，但是已经不是最佳时机。</p>
+<p>鉴于此，我个人写到这里，还是要为WDCP惋惜的，不清楚这个面板后面发展如何，但是我个人认为，如果我们需要选择的话，目前不是选择的机会，也许以后会有较大的更新升级，我们再去关注。在之前我们也有些过关于WDCP安装的面板文章。《 <a href="install-wdcp.html">搬瓦工VPS利用WDCP面板建站篇(一) - 一键包安装WDCP面板</a>》如果我们网友还在使用的话，建议找个时间更换掉其他环境。</p>
+<h3><span class="am-icon-angellist"></span> 第六、AMH WEB面板</h3>
+<p>与WDCP面板差不多时间的我们是否还记得有AMH面板？当初也是免费提供的，但是记得只开发到4.2版本之后就从5.0版本付费才可以使用，虽然只需要最低6元一个月，但是我们用户习惯免费的，所以不是特别习惯这样的模式，而且那时候我们还可以选择WDCP面板。可以说由于AMH的收费之后，WDCP才开始有了壮大机会，也可能是开始有大量用户使用，然后才发现WDCP有很多需要更新和完善的，同时由于营收能力的问题，WDCP团队才没有办法继续。</p>
+<p>目前，AMH面板免费版本提供的软件很旧，虽然有网友提供一些升级版本，但是毕竟不是官方提供的，使用用户并不多。AMH目前有不少的付费用户，我们也不知道具体使用如何，但是付费用户遇到几个就提到解决售后问题的得不到及时的解决，还是有一些问题的。这里让我们一起怀念当初也有使用过AMH面板。</p>
+<h3><span class="am-icon-angellist"></span> 第七、LAMP WEB脚本</h3>
+<p>LAMP环境，其实有点类似上面提到的LNMP环境一样，但是前者是基于APACHE 引擎的。由于我们有些WEB环境是需要在APACHE环境下进行的，所以需要用到LAMP环境。这里也提供一个目前一直在维护的LAMP WEB脚本。LAMP 一键安装包是一个用 Linux Shell 编写的可以为 Amazon Linux/CentOS/Fedora/Debian/Ubuntu 系统的 VPS 或服务器安装 LAMP(Linux + Apache + MySQL/MariaDB/Percona + PHP) 生产环境的 Shell 脚本。包含一些可选安装组件如：
+Zend OPcache, ionCube Loader, XCache, imagick, gmagick, libsodium, memcached, redis, mongodb, swoole, yaf, xdebug。</p>
+<p>安装方法：</p>
+<blockquote><p>yum -y install wget screen git</p><p>git clone https://github.com/teddysun/lamp.git</p><p>cd lamp</p><p>chmod 755 *.sh</p><p>screen -S lamp</p><p>./lamp.sh</p></blockquote>
+<p>然后我们可以看到安装进程，根据实际需要选择软件的版本。这个LAMP脚本与我们之前看到的非面板安装都有些相似之处，有自己的安装小工具，我们需要到官方网站看看实际的安装小工具。</p>
+<h3><span class="am-icon-angellist"></span> 第八、自己编译安装WEB</h3>
+<p>这里我们再提到一些高手站长用到的，他们不屑于使用别人开发的软件和工具，因为有些功能不需要也一并安装到里面，有些是出于安全的考虑和功能的要求，他们喜欢自己编译安装。我们有些站长对于SHELL比较熟悉，可以根据实际的需要进行自己定义编译安装MYSQL、PHP等等软件工具，这些都是有可以的。对于这类的脚本教程我们也可以看到，但是对于大部分站长来说，我们可以使用成熟的工具，毕竟可以减少不必要的维护麻烦。</p>
+<p>总结，以上我们只整理到八个安装WEB面板的工具和软件，其实要再整理十几个还是有的，但是这些并不是我们需要的，我们只需要熟悉1-2个就可以，我们是使用工具，适合我们就可以，没有必要在这些上浪费太多的时间，你觉得呢？</p>
+    <pre><abbr title="小提示">Tip：</abbr> 如果我们还需要了解其他搬瓦工VPS教程，可以参考<a href="xinshou.html" target="_blank"><abbr title="需要代购">新手教程</abbr></a>目录分类。</pre>
+  </div>
+
+  <div class="am-u-md-4 blog-sidebar">
+    <div class="am-panel-group">
+      <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">关于我们</div>
+        <div class="am-panel-bd">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;搬瓦工VPS，一款性价比极高的便宜VPS主机方案，搬瓦工专注提供各种国内优化线路的VPS，包括美国洛杉矶CN2 GIA、香港CN2 GIA、日本CN2 GIA、日本软银等，线路稳定、速度快，商家靠谱，有自己研发的控制面板管理系统，功能非常全面，适合我们基础建站、搭建环境以及各种折腾应用。</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;建议：选择任何一款VPS，具体的使用效果一切以我们实际为准，而且要知晓付出的成本与我们的获得的产品相当就应该知足，且不要要求太高。</p>
+          <p>搬瓦工VPS优惠通知QQ群：<a href="https://jq.qq.com/" target="_blank" rel="nofollow noopener">点击进入</a>
+</p>
+         
+        </div>
+      </section>
+       <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">新手教程</div>
+          <ul class="am-list blog-list">
+          <li><a href="bwh-install-appnode.html" target="_blank">搬瓦工主机建站系统配置：安装APPNode面板实现服务器集群管理</a></li>
+          <li> <a href="bwh-install-lnmp.html" target="_blank">搬瓦工主机建站系统配置：LNMP老牌一键WEB安装包安装Nginx/Apache引擎</a></li>
+          <li><a href="bwh-install-oneinstack.html" target="_blank">搬瓦工主机建站系统配置：Oneinstack一键快速安装LNMP/LAMP/LNMPA</a></li>
+          <li> <a href="bwg.php?tag=bandwagonhost-upgrage-lnmp/" target="_blank">利用服务器建站升级面板和WEB环境需要注意的几个问题</a></li>
+          <li><a href="bwg.php?tag=bandwagonhost-speedtest/" target="_blank">6个实用方法检测服务器/主机速度和稳定性 决定选择与否</a></li>
+          <li><a href="" target="_blank">Linux VPS服务器架设网站WEB系统可用的一键脚本软件整理</a></li>
+         <li> <a href="noallowip.html" target="_blank">搬瓦工VPS不提供免费更换IP服务 只能新购买IP地址</a></li>
+          <li> <a href="upramdisk.html" target="_blank">搬瓦工VPS流量和硬盘不够 如何升级配置</a></li>
+          <li><a href="cyberpanel.html" target="_blank">Linux VPS/服务器一键安装CyberPanel WEB面板</a></li>
+          <li> <a href="one-click-vnc.html" target="_blank">搬瓦工Linux服务器一键安装VNC可实现远程桌面</a></li>
+          <li><a href="bwg.php?tag=bandwagonhost-suspended/" target="_blank">搬瓦工服务器被限制suspended原因及解决办法</a></li>
+          <li> <a href="install-gnome.html" target="_blank">搬瓦工新增Mount ISO可挂载安装Linux GNOME远程桌面</a></li>
+          <li><a href="uptime.html" target="_blank">利用UptimeRobot工具实时监控搬瓦工VPS主机各机房在线率情况</a></li>
+         <li><a href="gonglue.html" target="_blank">新手用户搬瓦工VPS购买图文指导教程</a></li>
+        <li><a href="jichu.html" target="_blank">搬瓦工VPS基础应用篇 - 选择登录已购VPS方案</a></li>
+        <li><a href="anzhuang.html" target="_blank">搬瓦工VPS重新安装Linux系统过程及注意事项</a></li>  
+        <li><a href="genghuan.html" target="_blank">搬瓦工VPS自主任意更换机房实现换IP</a></li>
+        <li><a href="shengji.html" target="_blank">自助升级搬瓦工VPS主机方案方法</a></li>  
+        <li><a href="youhui.html" target="_blank">使用搬瓦工优惠码 让价格更低一点</a></li>  
+        <li><a href="install-wdcp.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(一) - 一键包安装WDCP面板</a></li>   
+        <li><a href="xufei.html" target="_blank">搬瓦工VPS续费、自动续费、取消续费几个问题</a></li> 
+        <li><a href="wdcp-addsite.html" target="_blank">搬瓦工VPS利用WDCP面板建站篇(二) - 添加站点和MYSQL数据库</a></li>
+        <li><a href="xuanzejifang.html" target="_blank">搬瓦工VPS主机选择机房和方案的几个建议</a></li>
+        <li><a href="tips.html" target="_blank">正确使用搬瓦工VPS主机的用途以及合理注意事项</a></li>
+        <li><a href="install-bt-panel.html" target="_blank">搬瓦工VPS快速安装BT宝塔Web面板</a></li>
+        <li><a href="kiwivm-panel.html" target="_blank">搬瓦工KiwiVM面板新手易用入门教学详细图文讲解</a></li>
+        <li><a href="dc6changedc.html" target="_blank">搬瓦工DC6/DC9配置方案切换机房有什么不同？</a></li>
+        <li><a href="plansdatacenter.html" target="_blank">搬瓦工5种套餐方案可切换全部机房整理大全 知道可换机房</a></li>
+        <li><a href="clearsystemcentos.html" target="_blank">实用 - CentOS/Debian/Ubuntu快速一键安装纯净版系统</a></li>
+        <li> <a href="bwg.php?tag=bandwaonhost-dd-windos/" target="_blank">搬瓦工VPS主机一键DD快速安装Windows8系统实现远程访问</a></li>
+        <li><a href="aboutrenewal.html" target="_blank">完整整理搬瓦工VPS服务器到期续费/自动续费/到期删除等问题</a></li>
+        </ul>
+      </section>
+             <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">搬瓦工选择建议</div>
+       <div class="am-panel-bd">
+          <p>1、目前有单个机房和多个机房区别，后者可以自己切换机房和IP，前者只有一个，不可以更换。</p>
+          <p>2、OPENVZ与KVM区别，如果需要速度好一些的，建议选择KVM架构，因为有BBR内核优化。</p>
+          <p>3、如果搭建网站用途，建议内存512MB及以上，以为安装面板或者一键包，基本需要这个配置。</p>
+         <p>4、搬瓦工VPS支持支付宝付款，无需找人代购，自己购买就可以。</p>
+         <p>5、目前洛杉矶CN2上线，电信直连，速度上提升不少，追求速度的可以选择洛杉矶CN2。</p>
+        </div>
+      </section>
+      <section class="am-panel am-panel-default">
+        <div class="am-panel-hd">最新搬瓦工优惠码</div>
+        <div class="am-panel-bd">
+          <p>虽然搬瓦工VPS已经算是比较便宜的了，但是为了迎合各种大家的兴趣和省钱的心态，还是会分享一些优惠码折扣让大家使用的，比如当前最低的大约在6.5%左右。</p>
+          <p>A - BWHCGLUKKB（优惠力度 6.77%）</p>
+          <p>B - BWH3OGRI2BMW（优惠力度 5.83%）</p>
+          <p>C - ireallyreadtheterms8（优惠力度 5.5%）</p>
+          <p>D - BWH3MNP2CG5J（优惠力度 5.39%）</p>
+          <p>E - BWH38ZU9VDKP（优惠力度 4.8%）</p>
+          <p>这是<a href="index.html">搬瓦工中文网</a>整理的最新的5个折扣码，我们可以选择A优先使用，每单可以节省几块钱。具体如何使用可以参考<a href="youhui.html" target="_blank">这里</a>，激活使用。</p>
+         
+        </div>
+      </section>
+    </div>
+  </div>
+</div><footer class="blog-footer">
+<hr data-am-widget="divider" style="" class="am-divider am-divider-default">
+  <p>
+    <small>CopyRight © 2015-2025 <a href="/index.html" rel="nofollow">搬瓦工vps指南</a> bwgvps-cn.org<br>搬瓦工vps服务器购买资讯 <a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">ICP证000861号</a><br>搬瓦工VPS购买指南本网站-提供方便新手用户的阅读文档技术支持。</small>
+
+  </p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="static/js/jquery.min1.js"></script>
+<script src="static/js/modernizr.js"></script>
+<script src="style/js/polyfill/rem.min.js"></script>
+<script src="style/js/polyfill/respond.min.js"></script>
+<script src="style/js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/amazeui.min.js"></script>
+<script src="static/js/zdy.js"></script><!--<![endif]-->
+
+</body>
+</html>
